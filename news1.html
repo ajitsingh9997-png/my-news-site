@@ -1,120 +1,267 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Allahabad High Court Judgment</title>
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-    }
-    body {
-      background-color: #f9f9f9;
-      color: #222222;
-      padding: 15px;
-    }
-    .header {
-      border-bottom: 2px solid #d9232d;
-      padding-bottom: 10px;
-      margin-bottom: 15px;
-    }
-    .logo {
-      font-size: 22px;
-      font-weight: bold;
-    }
-    .red-text {
-      color: #d9232d;
-    }
-    .breadcrumb {
-      font-size: 13px;
-      color: #666;
-      margin-bottom: 12px;
-    }
-    .main-title {
-      font-size: 20px;
-      line-height: 1.4;
-      margin-bottom: 12px;
-      color: #111;
-    }
-    .meta-info {
-      font-size: 13px;
-      margin-bottom: 15px;
-    }
-    .author {
-      color: #d9232d;
-      font-weight: bold;
-    }
-    .date {
-      color: #666;
-    }
-    .featured-img {
-      width: 100%;
-      height: auto;
-      border-radius: 6px;
-      margin-bottom: 15px;
-    }
-    .content p {
-      font-size: 15px;
-      line-height: 1.6;
-      margin-bottom: 15px;
-    }
-    .sub-heading {
-      font-size: 17px;
-      font-weight: bold;
-      color: #0b192c;
-      margin: 20px 0 10px 0;
-      border-left: 4px solid #d9232d;
-      padding-left: 8px;
-    }
-    .highlight-box {
-      background-color: #ffebe8;
-      border: 1px solid #ffc4c1;
-      padding: 12px;
-      border-radius: 5px;
-      margin-bottom: 15px;
-      font-size: 14px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Law Gazette | Allahabad High Court News & Legal Updates</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #1a237e; /* Deep Legal Blue */
+            --secondary-color: #b71c1c; /* Crimson Accent */
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-color: #212529;
+            --text-muted: #6c757d;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* Header / Branding */
+        header {
+            background-color: var(--primary-color);
+            color: #ffffff;
+            padding: 20px 15px;
+            text-align: center;
+            border-bottom: 4px solid var(--secondary-color);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-family: 'Merriweather', serif;
+            font-size: 2.2rem;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        header p {
+            font-size: 0.95rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #0f1442;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            padding: 10px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            padding: 5px 12px;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+
+        nav a:hover {
+            background-color: var(--secondary-color);
+        }
+
+        /* Container & Layout */
+        .container {
+            max-width: 1100px;
+            margin: 25px auto;
+            padding: 0 15px;
+        }
+
+        .main-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 25px;
+        }
+
+        /* Featured News Card */
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            margin-bottom: 20px;
+            border: 1px solid #e9ecef;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .tag {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: white;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 3px 8px;
+            border-radius: 3px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .card h2 {
+            font-family: 'Merriweather', serif;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #111;
+        }
+
+        .card .meta {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            color: #444;
+            margin-bottom: 15px;
+        }
+
+        .btn-read {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 8px 16px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        /* Sidebar Styling */
+        .sidebar .card {
+            padding: 15px;
+        }
+
+        .sidebar h3 {
+            font-size: 1.1rem;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 8px;
+            margin-bottom: 12px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 12px;
+            border-bottom: 1px dashed #ddd;
+            padding-bottom: 8px;
+        }
+
+        .sidebar ul li a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .sidebar ul li a:hover {
+            color: var(--secondary-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #111;
+            color: #aaa;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            font-size: 0.85rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+            header h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
 </head>
 <body>
 
-  <header class="header">
-    <div class="logo"><span class="red-text">The Law Gazette</span></div>
-  </header>
+    <header>
+        <h1>THE LAW GAZETTE</h1>
+        <p>Your Trusted Source for Legal News & High Court Updates</p>
+    </header>
 
-  <div class="breadcrumb">होम / इलाहाबाद हाईकोर्ट / क्रिमिनल जजमेंट</div>
+    <nav>
+        <a href="#">मुख्य समाचार</a>
+        <a href="#">इलाहाबाद हाईकोर्ट</a>
+        <a href="#">सुप्रीम कोर्ट</a>
+        <a href="#">कानूनी गाइड</a>
+    </nav>
 
-  <article>
-    <h1 class="main-title">
-      SC/ST Act के मुआविज़े का दुरुपयोग? इलाहाबाद हाईकोर्ट ने यूपी सरकार को दिए राज्यव्यापी जाँच के आदेश
-    </h1>
+    <div class="container">
+        <div class="main-grid">
+            
+            <!-- Main News Section -->
+            <main>
+                <article class="card">
+                    <div class="card-body">
+                        <span class="tag">Allahabad High Court</span>
+                        <h2>इलाहाबाद हाईकोर्ट का महत्वपूर्ण निर्णय: ज़मानत याचिकाओं पर सुनवाई को लेकर दिए नए निर्देश</h2>
+                        <div class="meta">पब्लिश किया गया: 8 सितंबर 2026 | By Legal Desk</div>
+                        <p>इलाहाबाद उच्च न्यायालय ने एक याचिका की सुनवाई के दौरान कहा कि न्याय की प्रक्रिया में देरी को रोकने के लिए अधीनस्थ अदालतों को समयबद्ध तरीके से मामलों का निस्तारण करना चाहिए...</p>
+                        <a href="news1.html" class="btn-read">पूरा आदेश पढ़ें ➔</a>
+                    </div>
+                </article>
 
-    <div class="meta-info">
-      <span class="author">विधि संवाददाता</span> | <span class="date">सितंबर 2026</span>
+                <article class="card">
+                    <div class="card-body">
+                        <span class="tag">Supreme Court</span>
+                        <h2>डिजिटल साक्ष्यों (Digital Evidence) की ग्राह्यता पर न्यायालय का बड़ा स्पष्टीकरण</h2>
+                        <div class="meta">पब्लिश किया गया: 7 सितंबर 2026 | By Legal Desk</div>
+                        <p>भारतीय साक्ष्य अधिनियम के तहत व्हाट्सएप चैट और डिजिटल रिकॉर्ड्स की वैधता पर सुप्रीम कोर्ट ने नई गाइडलाइन्स जारी की हैं...</p>
+                        <a href="#" class="btn-read">पूरा आदेश पढ़ें ➔</a>
+                    </div>
+                </article>
+            </main>
+
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <div class="card">
+                    <h3>ताज़ा ख़बरें (Latest Updates)</h3>
+                    <ul>
+                        <li><a href="#">इलाहाबाद हाईकोर्ट में नए जजों की नियुक्ति प्रक्रिया पर अपडेट</a></li>
+                        <li><a href="#">संपत्ति विवाद पर सेशन कोर्ट का महत्वपूर्ण फैसला</a></li>
+                        <li><a href="#">कानूनी जागरूकता: FIR दर्ज कराने के क्या हैं आपके अधिकार?</a></li>
+                    </ul>
+                </div>
+
+                <div class="card" style="background-color: #e8eaf6; text-align: center;">
+                    <h3>YouTube Channel</h3>
+                    <p style="font-size: 0.85rem; margin-bottom: 10px;">हमारे आधिकारिक यूट्यूब चैनल पर विस्तृत कानूनी वीडियो देखें।</p>
+                    <a href="https://youtube.com" target="_blank" class="btn-read" style="background-color: #cc0000;">Subscribe Now</a>
+                </div>
+            </aside>
+
+        </div>
     </div>
 
-    <!-- अगर आपके पास फोटो है तो photo.jpg नाम से सेव करके src="photo.jpg" करें -->
-    <img src="https://via.placeholder.com/600x320" alt="Allahabad High Court" class="featured-img">
-
-    <div class="content">
-      <p><strong>प्रयागराज:</strong> इलाहाबाद हाईकोर्ट ने हाल ही में अनुसूचित जाति और अनुसूचित जनजाति (SC/ST) अत्याचार निवारण अधिनियम के तहत दिए जाने वाले वित्तीय मुआवजे के दुरुपयोग पर कड़ा रुख अपनाया है। कोर्ट ने उत्तर प्रदेश सरकार को पूरे राज्य में यह जाँच करने के आदेश दिए हैं कि इस कानून के तहत वित्तीय राहत दावों का सही वितरण हो रहा है या नहीं।</p>
-
-      <div class="highlight-box">
-        <strong>मुख्य बिंदु:</strong> एक ही परिवार द्वारा अलग-अलग मामलों में ₹23 लाख से अधिक की वित्तीय सहायता प्राप्त करने के मामले के बाद हाईकोर्ट ने यह निर्देश दिया है।
-      </div>
-
-      <h2 class="sub-heading">क्या है पूरा मामला?</h2>
-      <p>यह मामला झाँसी ज़िले से सामने आया, जहाँ अदालत को सूचित किया गया कि एक वकील और उनके परिवार के सदस्यों ने विभिन्न आपराधिक मामलों में सरकार से ₹23 लाख से अधिक का मुआवजा प्राप्त किया है। इसके अलावा, इसी तरह के लगभग 10 से 12 अन्य मामले अभी भी लंबित हैं।</p>
-
-      <h2 class="sub-heading">हाईकोर्ट का सख्त आदेश</h2>
-      <p>मामले की सुनवाई करते हुए जस्टिस संतोष राय की पीठ ने माना कि सरकारी मुआवजे की राशि का बार-बार लाभ उठाने के लिए झूठे केस दर्ज कराने की संभावना से इनकार नहीं किया जा सकता। कोर्ट ने झाँसी के ज़िलाधिकारी (DM) और वरिष्ठ पुलिस अधीक्षक (SSP) को 3 महीने के भीतर निष्पक्ष जाँच पूरी करने के निर्देश दिए हैं।</p>
-
-      <p>कोर्ट ने स्पष्ट किया कि केवल बार-बार प्राथमिकी (FIR) दर्ज कराना ही दुरुपयोग का आधार नहीं है, लेकिन जहाँ धोखाधड़ी की आशंका हो, वहाँ गहन जाँच अनिवार्य है ताकि सरकारी धन का सही इस्तेमाल ज़रूरतमंदों के लिए ही हो सके।</p>
-    </div>
-  </article>
+    <footer>
+        <p>© 2026 The Law Gazette | thelawgazette.in | All Rights Reserved.</p>
+    </footer>
 
 </body>
 </html>
