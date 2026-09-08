@@ -1,19 +1,16 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="hi">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <!-- Primary SEO Tags -->
   <title>The Law Gazette | Legal News, High Court & Supreme Court Updates</title>
   <meta name="description" content="कानूनी ख़बरें, इलाहाबाद हाईकोर्ट, सुप्रीम कोर्ट के ताज़ा फैसले और भारत के नए कानूनों की सटीक और तेज़ अपडेट्स।">
   
-  <!-- Open Graph / WhatsApp / Facebook Share Tags -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://thelawgazette.in/">
   <meta property="og:title" content="The Law Gazette | भारत का भरोसेमंद लीगल न्यूज़ पोर्टल">
   <meta property="og:description" content="सुप्रीम कोर्ट, इलाहाबाद हाईकोर्ट और देश की तमाम बड़ी कानूनी ख़बरें पढ़ें सबसे पहले।">
-  <meta property="og:image" content="https://thelawgazette.in/og-image.jpg">
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
   
@@ -25,6 +22,8 @@
       --text: #212529;
       --whatsapp: #25d366;
       --telegram: #0088cc;
+      --instagram: #e1306c;
+      --youtube: #ff0000;
     }
     body {
       font-family: 'Poppins', sans-serif;
@@ -35,7 +34,7 @@
     header {
       background: var(--primary);
       color: white;
-      padding: 20px 15px;
+      padding: 20px 15px 15px;
       text-align: center;
       border-bottom: 4px solid var(--accent);
     }
@@ -46,10 +45,30 @@
       letter-spacing: 1px;
     }
     header p {
-      margin: 5px 0 0;
+      margin: 5px 0 10px;
       font-size: 0.9rem;
       opacity: 0.9;
     }
+    .social-follow {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .follow-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 5px 12px;
+      border-radius: 15px;
+      color: white;
+      text-decoration: none;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+    .follow-btn.insta { background: var(--instagram); }
+    .follow-btn.yt { background: var(--youtube); }
+
     nav {
       background: #0d1b2a;
       display: flex;
@@ -134,13 +153,19 @@
     }
     .share-btn.wa { background: var(--whatsapp); }
     .share-btn.tg { background: var(--telegram); }
+    
     footer {
       text-align: center;
-      padding: 20px;
+      padding: 25px 15px;
       background: #111;
       color: #aaa;
       font-size: 0.8rem;
       margin-top: 40px;
+    }
+    footer a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 8px;
     }
   </style>
 </head>
@@ -149,6 +174,14 @@
   <header>
     <h1>The Law Gazette</h1>
     <p>निष्पक्ष और सटीक लीगल न्यूज़ पोर्टल</p>
+    
+    <!-- Follow Buttons -->
+    <div class="social-follow">
+      <!-- यहाँ href में अपना Instagram Link डालें -->
+      <a href="https://instagram.com/the_lawgazette" target="_blank" class="follow-btn insta">📸 Follow on Instagram</a>
+      <!-- यहाँ href में अपना YouTube Link डालें -->
+      <a href="https://youtube.com/@https://youtube.com/@thelawgazette1?si=OiI4glGOnM9-gAaM" target="_blank" class="follow-btn yt">▶ Subscribe on YouTube</a>
+    </div>
   </header>
 
   <nav>
@@ -170,7 +203,6 @@
         <p>मामले की गंभीरता को देखते हुए माननीय पीठ ने संबंधित अधिकारियों को कड़े निर्देश जारी किए हैं...</p>
       </div>
 
-      <!-- Social Share Buttons -->
       <div class="share-box">
         <span>खबर शेयर करें:</span>
         <a href="https://api.whatsapp.com/send?text=इलाहाबाद%20हाईकोर्ट%20का%20बड़ा%20फैसला%20पढ़ें%20The%20Law%20Gazette%20पर:%20https://thelawgazette.in" target="_blank" class="share-btn wa">
@@ -184,6 +216,10 @@
   </div>
 
   <footer>
+    <p>Follow Us: 
+      <a href="https://instagram.com/the_lawgazzete" target="_blank">Instagram</a> | 
+      <a href="https://youtube.com/@https://youtube.com/@thelawgazette1?si=OiI4glGOnM9-gAaM" target="_blank">YouTube</a>
+    </p>
     © 2026 The Law Gazette. All Rights Reserved. | thelawgazette.in
   </footer>
 
