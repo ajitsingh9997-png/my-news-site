@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+      <!DOCTYPE html>
 <html lang="hi">
 <head>
   <meta charset="UTF-8">
@@ -54,16 +54,17 @@
       justify-content: center;
       gap: 10px;
       margin-top: 10px;
+      flex-wrap: wrap;
     }
     .follow-btn {
       display: inline-flex;
       align-items: center;
       gap: 5px;
-      padding: 5px 12px;
-      border-radius: 15px;
+      padding: 6px 14px;
+      border-radius: 20px;
       color: white;
       text-decoration: none;
-      font-size: 0.75rem;
+      font-size: 0.8rem;
       font-weight: 600;
     }
     .follow-btn.insta { background: var(--instagram); }
@@ -91,15 +92,16 @@
     }
     .container {
       max-width: 800px;
-      margin: 20px auto;
+      margin: 25px auto;
       padding: 0 15px;
     }
     .news-card {
       background: white;
       border-radius: 8px;
-      padding: 20px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-      margin-bottom: 20px;
+      padding: 22px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+      margin-bottom: 25px;
+      border: 1px solid #eee;
     }
     .news-tag {
       background: var(--accent);
@@ -112,10 +114,10 @@
     }
     .news-title {
       font-family: 'Merriweather', serif;
-      font-size: 1.4rem;
-      margin: 12px 0;
-      line-height: 1.4;
-      color: #000;
+      font-size: 1.35rem;
+      margin: 12px 0 8px;
+      line-height: 1.45;
+      color: #111;
     }
     .news-meta {
       font-size: 0.8rem;
@@ -125,10 +127,18 @@
     .news-content {
       line-height: 1.7;
       font-size: 0.95rem;
+      color: #333;
+    }
+    .news-content ul {
+      padding-left: 20px;
+      margin: 10px 0;
+    }
+    .news-content li {
+      margin-bottom: 8px;
     }
     .share-box {
-      margin-top: 20px;
-      padding-top: 15px;
+      margin-top: 18px;
+      padding-top: 12px;
       border-top: 1px solid #eee;
       display: flex;
       align-items: center;
@@ -144,11 +154,11 @@
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      padding: 8px 14px;
-      border-radius: 20px;
+      padding: 6px 12px;
+      border-radius: 15px;
       color: white;
       text-decoration: none;
-      font-size: 0.8rem;
+      font-size: 0.78rem;
       font-weight: bold;
     }
     .share-btn.wa { background: var(--whatsapp); }
@@ -175,76 +185,71 @@
     <h1>The Law Gazette</h1>
     <p>निष्पक्ष और सटीक लीगल न्यूज़ पोर्टल</p>
     
-    <!-- Follow Buttons -->
     <div class="social-follow">
-      <!-- यहाँ href में अपना Instagram Link डालें -->
-      <a href="https://instagram.com/the_lawgazette" target="_blank" class="follow-btn insta">📸 Follow on Instagram</a>
-      <!-- यहाँ href में अपना YouTube Link डालें -->
-      <a href="https://youtube.com/@https://youtube.com/@thelawgazette1?si=OiI4glGOnM9-gAaM" target="_blank" class="follow-btn yt">▶ Subscribe on YouTube</a>
+      <a href="https://instagram.com/YOUR_USERNAME" target="_blank" class="follow-btn insta">📸 Follow on Instagram</a>
+      <a href="https://youtube.com/@YOUR_CHANNEL" target="_blank" class="follow-btn yt">▶ Subscribe on YouTube</a>
     </div>
   </header>
 
   <nav>
     <a href="#" class="active">होम</a>
-    <a href="#">सुप्रीम कोर्ट</a>
     <a href="#">इलाहाबाद हाई कोर्ट</a>
-    <a href="#">नए कानून</a>
-    <a href="#">लीगल अपडेट्स</a>
+    <a href="#">सुप्रीम कोर्ट</a>
+    <a href="#">डिजिटल व नए कानून</a>
   </nav>
 
   <div class="container">
-    <!-- Post: Allahabad High Court SC/ST Act Relief Order -->
-<article class="news-card">
-  <span class="news-tag">इलाहाबाद हाई कोर्ट</span>
-  <h2 class="news-title">SC/ST Act: इलाहाबाद हाईकोर्ट का बड़ा आदेश, SC/ST एक्ट में मिलने वाले मुआवजे के गलत इस्तेमाल पर पूरे UP में जांच के निर्देश</h2>
-  <div class="news-meta">सितंबर 08, 2026 • The Law Gazette Desk</div>
-  
-  <div class="news-content">
-    <p><strong>प्रयागराज:</strong> इलाहाबाद उच्च न्यायालय ने SC/ST (अत्याचार निवारण) अधिनियम के तहत दी जाने वाली वित्तीय सहायता और मुआवजे के दावे व वितरण को लेकर बड़ा फैसला सुनाया है। कोर्ट ने उत्तर प्रदेश सरकार को पूरे राज्य में गहन जांच (UP-Wide Inquiry) कराने का आदेश दिया है ताकि यह पता लगाया जा सके कि सरकारी धन का गलत इस्तेमाल तो नहीं हो रहा ।</p>
-    
-    <p><strong>क्या है मामला?</strong><br>
-    जस्टिस संतोष राय की पीठ झांसी से जुड़ी अपीलों पर सुनवाई कर रही थी। सुनवाई के दौरान राज्य सरकार की रिपोर्ट में सामने आया कि एक ही वकील और उनके परिवार के सदस्यों ने बार-बार मामले दर्ज कराकर विभिन्न केसों में <strong>₹23.36 लाख से अधिक का मुआवजा हासिल किया</strong> और 10 से 12 अन्य क्लेम अभी लंबित हैं ।</p>
 
-    <p><strong>अदालत की अहम टिप्पणियां:</strong></p>
-    <ul>
-      <li><strong>स्पेशल कोर्ट्स मूकदर्शक नहीं:</strong> हाईकोर्ट ने स्पष्ट किया कि SC/ST मामलों की विशेष अदालतें (Special Courts) प्रशासनिक रिपोर्टों की मूकदर्शक नहीं हैं। Rule 12(7) के तहत विशेष अदालतों को मुआवजे की राशि और उसकी समयसीमा की न्यायिक जांच करने का पूरा अधिकार है।</li>
-      <li><strong>बार-बार क्लेम करने वालों पर नजर:</strong> कोर्ट ने कहा कि हालांकि बार-बार केस दर्ज होने का मतलब सीधे तौर पर गलत इस्तेमाल नहीं होता, लेकिन इतनी बड़ी संख्या में क्लेम की जांच होना जरूरी है ताकि कानून का मूल उद्देश्य बना रहे।</li>
-      <li><strong>3 महीने में जांच पूरी करने के निर्देश:</strong> कोर्ट ने झांसी के डीएम (DM) और एसएसपी (SSP) को संबंधित मामले की 3 महीने के भीतर निष्पक्ष जांच पूरी करने के निर्देश दिए हैं।</li>
-    </ul>
-  </div>
-
-  <div class="share-box">
-    <span>शेयर करें:</span>
-    <a href="https://api.whatsapp.com/send?text=SC/ST%20Act:%20इलाहाबाद%20हाईकोर्ट%20ने%20मुआवजे%20की%20जांच%20के%20दिए%20आदेश%20-%20पूरी%20खबर%20पढ़ें%20The%20Law%20Gazette%20पर:%20https://thelawgazette.in" target="_blank" class="share-btn wa">WhatsApp</a>
-    <a href="https://t.me/share/url?url=https://thelawgazette.in&text=SC/ST%20Act%20Allahabad%20High%20Court%20Order" target="_blank" class="share-btn tg">Telegram</a>
-  </div>
-</article>
+    <!-- LATEST POST: Allahabad High Court SC/ST Act Relief Order -->
     <article class="news-card">
       <span class="news-tag">इलाहाबाद हाई कोर्ट</span>
-      <h2 class="news-title">इलाहाबाद हाईकोर्ट का बड़ा फैसला: व्यक्तिगत स्वतंत्रता और कानूनी प्रक्रियाओं पर महत्वपूर्ण टिप्पणी</h2>
+      <h2 class="news-title">SC/ST Act: इलाहाबाद हाईकोर्ट का बड़ा आदेश, SC/ST एक्ट में मिलने वाले मुआवजे के गलत इस्तेमाल पर पूरे UP में जांच के निर्देश</h2>
       <div class="news-meta">सितंबर 08, 2026 • The Law Gazette Desk</div>
       
       <div class="news-content">
-        <p>प्रयागराज: इलाहाबाद उच्च न्यायालय ने एक अहम मामले की सुनवाई करते हुए व्यक्तिगत स्वतंत्रता और निष्पक्ष जांच प्रक्रियाओं पर अपने विचार व्यक्त किए हैं। अदालत ने स्पष्ट किया कि कानूनी प्रावधानों का पालन हर स्थिति में सुनिश्चित किया जाना चाहिए।</p>
-        <p>मामले की गंभीरता को देखते हुए माननीय पीठ ने संबंधित अधिकारियों को कड़े निर्देश जारी किए हैं...</p>
+        <p><strong>प्रयागराज:</strong> इलाहाबाद उच्च न्यायालय ने SC/ST (अत्याचार निवारण) अधिनियम के तहत दी जाने वाली वित्तीय सहायता और मुआवजे के दावे व वितरण को लेकर बड़ा फैसला सुनाया है। कोर्ट ने उत्तर प्रदेश सरकार को पूरे राज्य में गहन जांच (UP-Wide Inquiry) कराने का आदेश दिया है ताकि यह पता लगाया जा सके कि सरकारी धन का गलत इस्तेमाल तो नहीं हो रहा।</p>
+        
+        <p><strong>क्या है मामला?</strong><br>
+        जस्टिस संतोष राय की पीठ झांसी से जुड़ी अपीलों पर सुनवाई कर रही थी। सुनवाई के दौरान राज्य सरकार की रिपोर्ट में सामने आया कि एक ही वकील और उनके परिवार के सदस्यों ने बार-बार मामले दर्ज कराकर विभिन्न केसों में <strong>₹23.36 लाख से अधिक का मुआवजा हासिल किया</strong> और 10 से 12 अन्य क्लेम अभी लंबित हैं।</p>
+
+        <p><strong>अदालत की अहम टिप्पणियां:</strong></p>
+        <ul>
+          <li><strong>स्पेशल कोर्ट्स मूकदर्शक नहीं:</strong> हाईकोर्ट ने स्पष्ट किया कि SC/ST मामलों की विशेष अदालतें (Special Courts) प्रशासनिक रिपोर्टों की मूकदर्शक नहीं हैं। Rule 12(7) के तहत विशेष अदालतों को मुआवजे की राशि और उसकी समयसीमा की न्यायिक जांच करने का पूरा अधिकार है।</li>
+          <li><strong>बार-बार क्लेम करने वालों पर नजर:</strong> कोर्ट ने कहा कि हालांकि बार-बार केस दर्ज होने का मतलब सीधे तौर पर गलत इस्तेमाल नहीं होता, लेकिन इतनी बड़ी संख्या में क्लेम की जांच होना जरूरी है ताकि कानून का मूल उद्देश्य बना रहे।</li>
+          <li><strong>3 महीने में जांच पूरी करने के निर्देश:</strong> कोर्ट ने झांसी के डीएम (DM) और एसएसपी (SSP) को संबंधित मामले की 3 महीने के भीतर निष्पक्ष जांच पूरी करने के निर्देश दिए हैं।</li>
+        </ul>
       </div>
 
       <div class="share-box">
-        <span>खबर शेयर करें:</span>
-        <a href="https://api.whatsapp.com/send?text=इलाहाबाद%20हाईकोर्ट%20का%20बड़ा%20फैसला%20पढ़ें%20The%20Law%20Gazette%20पर:%20https://thelawgazette.in" target="_blank" class="share-btn wa">
-          WhatsApp
-        </a>
-        <a href="https://t.me/share/url?url=https://thelawgazette.in&text=इलाहाबाद%20हाईकोर्ट%20का%20बड़ा%20फैसला" target="_blank" class="share-btn tg">
-          Telegram
-        </a>
+        <span>शेयर करें:</span>
+        <a href="https://api.whatsapp.com/send?text=SC/ST%20Act:%20इलाहाबाद%20हाईकोर्ट%20ने%20मुआवजे%20की%20जांच%20के%20दिए%20आदेश%20-%20पूरी%20खबर%20पढ़ें%20The%20Law%20Gazette%20पर:%20https://thelawgazette.in" target="_blank" class="share-btn wa">WhatsApp</a>
+        <a href="https://t.me/share/url?url=https://thelawgazette.in&text=SC/ST%20Act%20Allahabad%20High%20Court%20Order" target="_blank" class="share-btn tg">Telegram</a>
       </div>
     </article>
+
+    <!-- OLD POST 1: Allahabad High Court -->
+    <article class="news-card">
+      <span class="news-tag">इलाहाबाद हाई कोर्ट</span>
+      <h2 class="news-title">इलाहाबाद हाईकोर्ट का फैसला: बालिग व्यक्ति की जीवनसाथी चुनने की स्वतंत्रता में माता-पिता का दखल भी स्वीकार्य नहीं</h2>
+      <div class="news-meta">सितंबर 08, 2026 • The Law Gazette Desk</div>
+      
+      <div class="news-content">
+        <p><strong>प्रयागराज:</strong> इलाहाबाद उच्च न्यायालय ने संविधान के अनुच्छेद 21 के तहत व्यक्तिगत स्वतंत्रता पर एक बेहद महत्वपूर्ण फैसला सुनाया है। कोर्ट ने स्पष्ट किया कि जब कोई व्यक्ति बालिग हो जाता है, तो उसे अपना जीवनसाथी चुनने का पूर्ण संवैधानिक अधिकार प्राप्त है।</p>
+      </div>
+
+      <div class="share-box">
+        <span>शेयर करें:</span>
+        <a href="https://api.whatsapp.com/send?text=https://thelawgazette.in" target="_blank" class="share-btn wa">WhatsApp</a>
+        <a href="https://t.me/share/url?url=https://thelawgazette.in" target="_blank" class="share-btn tg">Telegram</a>
+      </div>
+    </article>
+
   </div>
 
   <footer>
     <p>Follow Us: 
-      <a href="https://instagram.com/the_lawgazzete" target="_blank">Instagram</a> | 
-      <a href="https://youtube.com/@https://youtube.com/@thelawgazette1?si=OiI4glGOnM9-gAaM" target="_blank">YouTube</a>
+      <a href="https://instagram.com/YOUR_USERNAME" target="_blank">Instagram</a> | 
+      <a href="https://youtube.com/@YOUR_CHANNEL" target="_blank">YouTube</a>
     </p>
     © 2026 The Law Gazette. All Rights Reserved. | thelawgazette.in
   </footer>
