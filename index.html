@@ -33,17 +33,32 @@
       color: var(--text);
     }
     header {
-      background: var(--primary);
-      color: white;
-      padding: 20px 15px 15px;
-      text-align: center;
-      border-bottom: 4px solid var(--accent);
-    }
-    header h1 {
-      margin: 0;
-      font-family: 'Merriweather', serif;
-      font-size: 2rem;
-      letter-spacing: 1px;
+    background: linear-gradient(rgba(15, 23, 42, 0.88), rgba(15, 23, 42, 0.88)), 
+                url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1200&q=80');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 30px 15px 20px 15px;
+    text-align: center;
+    border-bottom: 4px solid #b71c1c;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+    margin-bottom: 5px;
+    color: #ffffff;
+}
+
+header p {
+    font-size: 15px;
+    color: #e2e8f0;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
     }
     header p {
       margin: 5px 0 10px;
