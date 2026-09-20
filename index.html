@@ -247,6 +247,361 @@ header p {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Law Gazette - Hindi Legal News Portal</title>
+    
+    <!-- Meta Tags for SEO & Social Media Preview -->
+    <meta property="og:title" content="इलाहाबाद हाईकोर्ट एवं सुप्रीम कोर्ट का बड़ा फैसला" />
+    <meta property="og:description" content="कानूनी जगत की ताज़ा खबरें और महत्वपूर्ण अदालती फैसले पढ़ें।" />
+    <meta property="og:url" content="https://thelawgazette.in/" />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=1200&auto=format&fit=crop" />
+
+    <style>
+        :root {
+            --primary-color: #8b0000;
+            --text-color: #1a1a1a;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --accent-blue: #007bff;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            line-height: 1.7;
+        }
+
+        .header {
+            background: #ffffff;
+            padding: 15px 20px;
+            text-align: center;
+            border-bottom: 2px solid var(--primary-color);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .header h1 {
+            margin: 0;
+            color: var(--primary-color);
+            font-size: 24px;
+            font-weight: 800;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 15px;
+        }
+
+        .news-card {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            margin-bottom: 25px;
+        }
+
+        .category-badge {
+            color: var(--primary-color);
+            font-weight: 700;
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+
+        h2.news-title {
+            font-size: 24px;
+            line-height: 1.4;
+            color: #111;
+            margin: 10px 0 15px 0;
+            font-weight: 800;
+        }
+
+        .meta-date {
+            font-size: 13px;
+            color: #6c757d;
+            margin-bottom: 20px;
+        }
+
+        /* Poster Image with Top Text Overlay */
+        .image-poster-card {
+            position: relative;
+            margin: 20px 0;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .image-poster-card img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .image-top-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.6) 70%, transparent 100%);
+            color: #ffffff;
+            padding: 18px;
+        }
+
+        .image-top-overlay h4 {
+            margin: 0 0 5px 0;
+            font-size: 17px;
+            color: #ff6b6b;
+        }
+
+        .image-top-overlay p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .news-content p {
+            font-size: 17px;
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+
+        /* Tags Section (LiveLaw Style) */
+        .tags-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin: 25px 0 15px 0;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+        }
+
+        .tags-label {
+            font-weight: bold;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .tag-pill {
+            background: #e9ecef;
+            color: #495057;
+            padding: 5px 12px;
+            border-radius: 4px;
+            font-size: 13px;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        /* Author Card (LiveLaw Style) */
+        .author-card {
+            border-left: 4px solid var(--primary-color);
+            background: #fdfdfd;
+            border: 1px solid #e2e8f0;
+            border-left-width: 4px;
+            padding: 20px;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin: 25px 0;
+        }
+
+        .author-avatar {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: #ffe3e3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+
+        .author-avatar img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+        }
+
+        .author-name {
+            font-weight: 700;
+            font-size: 18px;
+            color: #1a1a1a;
+        }
+
+        /* NEXT STORY DIVIDER (Screenshot jaisa) */
+        .next-story-divider {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            margin: 45px 0;
+        }
+
+        .next-story-divider::before,
+        .next-story-divider::after {
+            content: '';
+            flex: 1;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .next-story-divider span {
+            padding: 0 18px;
+            font-size: 22px;
+            font-weight: 600;
+            color: #222;
+            letter-spacing: 0.5px;
+        }
+
+        /* FLOATING BELL NOTIFICATION BUTTON (Screenshot jaisa) */
+        .floating-bell-btn {
+            position: fixed;
+            bottom: 25px;
+            right: 20px;
+            width: 55px;
+            height: 55px;
+            background-color: var(--accent-blue);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4);
+            cursor: pointer;
+            z-index: 999;
+            border: none;
+            outline: none;
+            transition: transform 0.2s;
+        }
+
+        .floating-bell-btn:hover {
+            transform: scale(1.08);
+        }
+
+        .floating-bell-btn svg {
+            width: 26px;
+            height: 26px;
+            fill: white;
+        }
+
+        .whatsapp-share-btn {
+            display: inline-block;
+            background: #25d366;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>THE LAW GAZETTE</h1>
+</div>
+
+<div class="container">
+
+    <!-- ==================== ARTICLE 1 ==================== -->
+    <article class="news-card">
+        <span class="category-badge">इलाहाबाद हाईकोर्ट</span>
+        <h2 class="news-title">पति और ससुराल वालों पर बिना सबूत 498A का केस दर्ज कराना कानून का दुरुपयोग: इलाहाबाद हाईकोर्ट</h2>
+        <div class="meta-date">Shahadat | 20 Sept 2026 6:48 PM (4 mins read)</div>
+
+        <div class="image-poster-card">
+            <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=1000&auto=format&fit=crop" alt="Legal Gavel">
+            <div class="image-top-overlay">
+                <h4>Poster 1: धारा 498A का दुरुपयोग</h4>
+                <p>अदालत ने कहा: बिना ठोस सबूतों के पूरे परिवार पर केस चलाना गलत है।</p>
+            </div>
+        </div>
+
+        <div class="news-content">
+            <p><b>प्रयागराज:</b> इलाहाबाद उच्च न्यायालय ने एक महत्वपूर्ण फैसले में कहा है कि यदि पत्नी द्वारा पति और उसके परिजनों के खिलाफ बिना किसी विशिष्ट घटना के सामान्य आरोप लगाए जाते हैं, तो आपराधिक कार्यवाही निरस्त की जाएगी।</p>
+            <p>न्यायमूर्ति राजीव मिश्र की पीठ ने आपराधिक याचिका स्वीकार करते हुए 498A के मुकदमे को खारिज कर दिया।</p>
+        </div>
+
+        <!-- Tags (LiveLaw Style) -->
+        <div class="tags-container">
+            <span class="tags-label">Tags</span>
+            <a href="#" class="tag-pill">Section 498A</a>
+            <a href="#" class="tag-pill">Allahabad High Court</a>
+            <a href="#" class="tag-pill">Dowry Case</a>
+        </div>
+
+        <!-- Author Card (LiveLaw Style) -->
+        <div class="author-card">
+            <div class="author-avatar">
+                <img src="https://api.dicebear.com/7.x/bottts/svg?seed=Shahadat" alt="Author">
+            </div>
+            <div class="author-name">Shahadat</div>
+        </div>
+
+        <a href="https://api.whatsapp.com/send?text=इलाहाबाद हाईकोर्ट का 498A पर फैसला: https://thelawgazette.in/" class="whatsapp-share-btn" target="_blank">🟢 WhatsApp शेयर करें</a>
+    </article>
+
+
+    <!-- ==================== NEXT STORY DIVIDER ==================== -->
+    <div class="next-story-divider">
+        <span>Next Story</span>
+    </div>
+
+
+    <!-- ==================== ARTICLE 2 ==================== -->
+    <article class="news-card">
+        <span class="category-badge">सुप्रीम कोर्ट</span>
+        <h2 class="news-title">कॉन्ट्रैक्ट पर काम करने वाले कर्मचारियों को ग्रेच्युटी देने के लिए मुख्य नियोक्ता ज़िम्मेदार नहीं: सुप्रीम कोर्ट</h2>
+        <div class="meta-date">Shahadat | 20 Sept 2026 6:10 PM (3 mins read)</div>
+
+        <div class="image-poster-card">
+            <img src="https://images.unsplash.com/photo-1453728013993-6d66e9c9123a?q=80&w=1000&auto=format&fit=crop" alt="Supreme Court Document">
+            <div class="image-top-overlay">
+                <h4>Poster 2: ठेका कर्मचारियों की ग्रेच्युटी पर फैसला</h4>
+                <p>सर्वोच्च अदालत ने श्रम कानून के तहत महत्वपूर्ण व्यवस्था दी।</p>
+            </div>
+        </div>
+
+        <div class="news-content">
+            <p><b>नई दिल्ली:</b> सुप्रीम कोर्ट ने ऐतिहासिक फैसला सुनाते हुए स्पष्ट किया है कि ठेके (Contract) पर काम करने वाले कर्मचारियों की ग्रेच्युटी के भुगतान के लिए मुख्य नियोक्ता (Principal Employer) को उत्तरदायी नहीं ठहराया जा सकता।</p>
+        </div>
+
+        <!-- Tags -->
+        <div class="tags-container">
+            <span class="tags-label">Tags</span>
+            <a href="#" class="tag-pill">Supreme Court</a>
+            <a href="#" class="tag-pill">Gratuity Act</a>
+            <a href="#" class="tag-pill">Labour Law</a>
+        </div>
+
+        <!-- Author Card -->
+        <div class="author-card">
+            <div class="author-avatar">
+                <img src="https://api.dicebear.com/7.x/bottts/svg?seed=Shahadat" alt="Author">
+            </div>
+            <div class="author-name">Shahadat</div>
+        </div>
+
+        <a href="https://api.whatsapp.com/send?text=सुप्रीम कोर्ट का ग्रेच्युटी पर फैसला: https://thelawgazette.in/" class="whatsapp-share-btn" target="_blank">🟢 WhatsApp शेयर करें</a>
+    </article>
+
+</div>
+
+<!-- FLOATING BELL ICON (Bottom Right) -->
+<button class="floating-bell-btn" onclick="alert('Notification Subscribed!')" title="Subscribe Notifications">
+    <svg viewBox="0 0 24 24">
+        <path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2zm-2 1H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5v6z"/>
+    </svg>
+</button>
+
+</body>
+</html>
+        <!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- SEO Meta Tags for High Search Ranking -->
     <title>इलाहाबाद हाईकोर्ट का अहम फैसला: पति के खिलाफ बिना सबूत 498A का झूठा मुकदमा दर्ज कराना मानसिक क्रूरता, कोर्ट ने निरस्त की FIR | The Law Gazette</title>
     <meta name="description" content="Allahabad High Court Latest Judgment September 2026: Justice Rajeev Misra quashes Section 498A proceedings, holding that general and vague allegations against husband and in-laws amount to mental cruelty.">
