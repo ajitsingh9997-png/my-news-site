@@ -221,6 +221,489 @@ header p {
   </nav>
 
   <div class="container">:
+        <!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Court Judgments Search Portal</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #1a365d;
+            --secondary-color: #2b6cb0;
+            --accent-color: #d69e2e;
+            --bg-color: #f7fafc;
+            --card-bg: #ffffff;
+            --text-color: #2d3748;
+            --border-radius: 8px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px 0;
+            border-bottom: 3px solid var(--primary-color);
+        }
+
+        header h1 {
+            color: var(--primary-color);
+            font-size: 2.2rem;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            color: #718096;
+        }
+
+        .search-box-container {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 25px;
+        }
+
+        .search-row {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .search-input-wrapper {
+            position: relative;
+            flex: 1;
+        }
+
+        .search-input-wrapper i {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #a0aec0;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 12px 15px 12px 42px;
+            font-size: 1rem;
+            border: 1px solid #cbd5e0;
+            border-radius: var(--border-radius);
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .search-input:focus {
+            border-color: var(--secondary-color);
+        }
+
+        .filter-row {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .filter-select {
+            padding: 10px 15px;
+            border: 1px solid #cbd5e0;
+            border-radius: var(--border-radius);
+            background: #fff;
+            color: var(--text-color);
+            outline: none;
+            cursor: pointer;
+            flex: 1;
+            min-width: 160px;
+        }
+
+        .results-count {
+            margin-bottom: 15px;
+            font-weight: 600;
+            color: #4a5568;
+        }
+
+        .judgments-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .judgment-card {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            border-left: 5px solid var(--primary-color);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .judgment-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 10px;
+        }
+
+        .case-title {
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .case-title:hover {
+            color: var(--secondary-color);
+        }
+
+        .tags {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+
+        .tag {
+            font-size: 0.8rem;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-weight: 600;
+        }
+
+        .tag-court {
+            background-color: #ebf8ff;
+            color: #2b6cb0;
+        }
+
+        .tag-type {
+            background-color: #feebc8;
+            color: #c05621;
+        }
+
+        .tag-year {
+            background-color: #e2e8f0;
+            color: #4a5568;
+        }
+
+        .citation {
+            font-size: 0.9rem;
+            color: #718096;
+            margin-bottom: 12px;
+            font-style: italic;
+        }
+
+        .summary {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #4a5568;
+            margin-bottom: 15px;
+        }
+
+        .card-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn {
+            padding: 8px 14px;
+            font-size: 0.85rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: background 0.2s;
+        }
+
+        .btn-primary {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-color);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 1px solid #cbd5e0;
+            color: #4a5568;
+        }
+
+        .btn-outline:hover {
+            background-color: #edf2f7;
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 40px;
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            color: #718096;
+        }
+
+        /* Modal styling */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .modal-content {
+            background: #fff;
+            padding: 25px;
+            border-radius: var(--border-radius);
+            max-width: 600px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .close-btn {
+            cursor: pointer;
+            font-size: 1.2rem;
+        }
+
+        @media (max-width: 600px) {
+            .search-row, .filter-row {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1><i class="fa-solid fa-gavel"></i> Searchable Legal Judgments Portal</h1>
+        <p>Supreme Court aur High Courts ke mahatvapurna nirnay khojein</p>
+    </header>
+
+    <div class="search-box-container">
+        <div class="search-row">
+            <div class="search-input-wrapper">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="searchInput" class="search-input" placeholder="Case title, party name ya keywords dwara khojein...">
+            </div>
+        </div>
+        <div class="filter-row">
+            <select id="courtFilter" class="filter-select">
+                <option value="">Sabhi Courts</option>
+                <option value="Supreme Court of India">Supreme Court of India</option>
+                <option value="Delhi High Court">Delhi High Court</option>
+                <option value="Allahabad High Court">Allahabad High Court</option>
+            </select>
+
+            <select id="typeFilter" class="filter-select">
+                <option value="">Sabhi Case Types</option>
+                <option value="Civil Appeal">Civil Appeal</option>
+                <option value="Criminal Appeal">Criminal Appeal</option>
+                <option value="Writ Petition">Writ Petition</option>
+                <option value="Arbitration Petition">Arbitration Petition</option>
+            </select>
+
+            <select id="yearFilter" class="filter-select">
+                <option value="">Sabhi Saalam</option>
+                <option value="2026">2026</option>
+                <option value="2025">2025</option>
+                <option value="2024">2024</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="results-count" id="resultsCount">Results dikhaye ja rahe hain...</div>
+
+    <div class="judgments-list" id="judgmentsList">
+        <!-- Cards JavaScript se dynamically generate honge -->
+    </div>
+</div>
+
+<!-- Judgment Modal -->
+<div class="modal" id="judgmentModal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2 id="modalTitle" style="color: var(--primary-color);"></h2>
+            <span class="close-btn" id="closeModal">&times;</span>
+        </div>
+        <div id="modalBody"></div>
+    </div>
+</div>
+
+<script>
+    // Sample Data Array (Yahan aap apna data replace kar sakte hain)
+    const judgments = [
+        {
+            id: 1,
+            title: "M/S JK Paper Ltd vs. Bipinchandra Natwarlal Shah",
+            citation: "C.A. No. 13477/2026",
+            court: "Supreme Court of India",
+            type: "Civil Appeal",
+            year: "2026",
+            summary: "Kompany aur contract dispute se judi appeal par Supreme Court ne limitation period aur contractual obligations par mahatvapurna aadesh diya.",
+            fullDetails: "Is mamle me court ne spasht kiya ki limitation period ke tehat samay sima ka palan karna avashyak hai aur arbitration clauses ke antargat diye gaye nirnay ko prapt tathyon ke aadhar par barakarar rakha gaya."
+        },
+        {
+            title: "Harish Bagla vs. The State of West Bengal",
+            citation: "Crl.A. No. 2393/2023",
+            court: "Supreme Court of India",
+            type: "Criminal Appeal",
+            year: "2026",
+            summary: "Criminal procedure aur bail conditions par sunvai karte hue Supreme Court ne personal liberty aur investigation ke santulan par zor diya.",
+            fullDetails: "Court ne CrPC ki dharao ke tehat accused ke rights aur fair trial ke siddhanto ka pravdhan karte hue rajya sarkar ko spasht nirdesh diye."
+        },
+        {
+            id: 3,
+            title: "Bharat Forge Litigation Appeal Case",
+            citation: "LPA No. 412/2026",
+            court: "Delhi High Court",
+            type: "Arbitration Petition",
+            year: "2026",
+            summary: "Arbitral award set aside karne ke aadesh ke khilaf daakhil appeal ko Division Bench ne kharij kiya.",
+            fullDetails: "Delhi High Court ki Division Bench ne Single Judge ke us aadesh ko sahi thehraya jisme arbitral award ko radd kiya gaya tha."
+        },
+        {
+            id: 4,
+            title: "Balwant Singh vs. Union of India",
+            citation: "W.P.(Crl.) No. 414/2024",
+            court: "Supreme Court of India",
+            type: "Writ Petition",
+            year: "2024",
+            summary: "Constitutional rights aur executive powers ke prayog par daakhil writ petition par faisla.",
+            fullDetails: "Maulik adhikaro ke hanan aur kanooni pravdhano ki samiksha karte hue bench ne important guidelines jari kiye."
+        }
+    ];
+
+    const searchInput = document.getElementById('searchInput');
+    const courtFilter = document.getElementById('courtFilter');
+    const typeFilter = document.getElementById('typeFilter');
+    const yearFilter = document.getElementById('yearFilter');
+    const judgmentsList = document.getElementById('judgmentsList');
+    const resultsCount = document.getElementById('resultsCount');
+
+    // Render Judgments
+    function renderJudgments(filteredJudgments) {
+        judgmentsList.innerHTML = '';
+        resultsCount.textContent = `Kul ${filteredJudgments.length} judgments mile`;
+
+        if (filteredJudgments.length === 0) {
+            judgmentsList.innerHTML = `<div class="no-results"><i class="fa-solid fa-folder-open fa-2x"></i><br><br>Koi judgment nahi mila. Kripya apne search terms badlein.</div>`;
+            return;
+        }
+
+        filteredJudgments.forEach(item => {
+            const card = document.createElement('div');
+            card.className = 'judgment-card';
+            card.innerHTML = `
+                <div class="card-header">
+                    <a href="#" class="case-title" onclick="openModal(${item.id}); return false;">${item.title}</a>
+                </div>
+                <div class="tags">
+                    <span class="tag tag-court">${item.court}</span>
+                    <span class="tag tag-type">${item.type}</span>
+                    <span class="tag tag-year">${item.year}</span>
+                </div>
+                <div class="citation"><i class="fa-solid fa-bookmark"></i> Citation: ${item.citation}</div>
+                <div class="summary">${item.summary}</div>
+                <div class="card-actions">
+                    <button class="btn btn-primary" onclick="openModal(${item.id})"><i class="fa-solid fa-file-lines"></i> Pura Padhien</button>
+                    <button class="btn btn-outline" onclick="copyCitation('${item.citation}')"><i class="fa-solid fa-copy"></i> Citation Copy Karein</button>
+                </div>
+            `;
+            judgmentsList.appendChild(card);
+        });
+    }
+
+    // Filter Logic
+    function filterJudgments() {
+        const query = searchInput.value.toLowerCase();
+        const court = courtFilter.value;
+        const type = typeFilter.value;
+        const year = yearFilter.value;
+
+        const filtered = judgments.filter(item => {
+            const matchesQuery = item.title.toLowerCase().includes(query) || 
+                                 item.citation.toLowerCase().includes(query) || 
+                                 item.summary.toLowerCase().includes(query);
+            const matchesCourt = court === "" || item.court === court;
+            const matchesType = type === "" || item.type === type;
+            const matchesYear = year === "" || item.year === year;
+
+            return matchesQuery && matchesCourt && matchesType && matchesYear;
+        });
+
+        renderJudgments(filtered);
+    }
+
+    // Modal Functions
+    function openModal(id) {
+        const judgment = judgments.find(j => j.id === id);
+        if(!judgment) return;
+        document.getElementById('modalTitle').innerText = judgment.title;
+        document.getElementById('modalBody').innerHTML = `
+            <p><strong>Court:</strong> ${judgment.court}</p>
+            <p><strong>Citation:</strong> ${judgment.citation}</p>
+            <p><strong>Case Type:</strong> ${judgment.type} (${judgment.year})</p>
+            <hr style="margin: 15px 0;">
+            <p style="line-height: 1.6;">${judgment.fullDetails}</p>
+        `;
+        document.getElementById('judgmentModal').style.display = 'flex';
+    }
+
+    document.getElementById('closeModal').onclick = function() {
+        document.getElementById('judgmentModal').style.display = 'none';
+    };
+
+    function copyCitation(text) {
+        navigator.clipboard.writeText(text);
+        alert('Citation copy ho gaya hai: ' + text);
+    }
+
+    // Event Listeners
+    searchInput.addEventListener('input', filterJudgments);
+    courtFilter.addEventListener('change', filterJudgments);
+    typeFilter.addEventListener('change', filterJudgments);
+    yearFilter.addEventListener('change', filterJudgments);
+
+    // Initial Load
+    renderJudgments(judgments);
+</script>
+</body>
+</html>
 <!-- Live Search Filter Script -->
 <script>
 function filterArticles() {
