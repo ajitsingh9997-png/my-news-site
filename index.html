@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Law Gazette | ताज़ा कानूनी फैसले, जजमेंट और अधिकार - thelawgazette.in</title>
-    <meta name="description" content="सुप्रीम कोर्ट और हाईकोर्ट के ताज़ा कानूनी फैसले, लिव-इन और अधिकारों से जुड़ी खबरें तथा पिछला अर्काइव — thelawgazette.in">
+    <meta name="description" content="सुप्रीम कोर्ट और हाईकोर्ट के ताज़ा कानूनी फैसले, लिव-इन और अधिकारों से जुड़ी खबरें तथा पुराने महत्वपूर्ण विषय — thelawgazette.in">
     <link rel="canonical" href="https://thelawgazette.in/">
 
     <!-- Open Graph Tags for WhatsApp / Social Preview -->
@@ -84,11 +84,15 @@
             font-weight: 800;
             padding: 9px 16px;
             border-radius: 8px;
-            transition: transform 0.15s ease;
         }
         .btn-gold {
             background: #eab308;
             color: #0f172a;
+        }
+        .btn-navy {
+            background: #1e293b;
+            color: #fde68a;
+            border: 1px solid #d4af37;
         }
         .btn-ig {
             background: #db2777;
@@ -125,6 +129,9 @@
         .featured-card {
             border-top: 4px solid #991b1b;
         }
+        .old-topic-card {
+            border-left: 4px solid #0b1f3a;
+        }
         .badge-new {
             display: inline-block;
             background: #991b1b;
@@ -145,12 +152,29 @@
             border-radius: 20px;
             margin-bottom: 10px;
         }
+        .badge-old {
+            display: inline-block;
+            background: #e2e8f0;
+            color: #0b1f3a;
+            font-size: 12px;
+            font-weight: 800;
+            padding: 3px 10px;
+            border-radius: 20px;
+            margin-bottom: 8px;
+        }
         .news-card h2 {
             margin: 6px 0 10px 0;
             font-size: 22px;
             line-height: 1.4;
             color: #0f172a;
             font-weight: 900;
+        }
+        .news-card h3 {
+            margin: 6px 0 8px 0;
+            font-size: 19px;
+            line-height: 1.4;
+            color: #0b1f3a;
+            font-weight: 800;
         }
         .meta {
             font-size: 13px;
@@ -175,33 +199,6 @@
         }
         .read-btn-alt {
             background: #1d4ed8;
-        }
-
-        .archive-box {
-            background: #ffffff;
-            border-radius: 12px;
-            padding: 18px 20px;
-            border: 1px solid #e2e8f0;
-            box-shadow: 0 3px 10px rgba(15, 23, 42, 0.04);
-        }
-        .archive-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        .archive-list li {
-            padding: 10px 0;
-            border-bottom: 1px solid #f1f5f9;
-            font-size: 15px;
-            font-weight: 700;
-            color: #1e293b;
-        }
-        .archive-list li:last-child {
-            border-bottom: none;
-        }
-        .archive-list a {
-            color: #0b1f3a;
-            text-decoration: none;
         }
 
         .share-box {
@@ -245,6 +242,7 @@
         <p class="tagline">निष्पक्ष और सटीक लीगल न्यूज़ पोर्टल | thelawgazette.in</p>
         <div class="header-actions">
             <a class="hdr-btn btn-gold" href="#latest-news">🔥 ताज़ा खबरें</a>
+            <a class="hdr-btn btn-navy" href="#old-topics">📚 पुराने विषय</a>
             <a class="hdr-btn btn-ig" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">📷 Follow on Instagram</a>
             <a class="hdr-btn btn-yt" href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">▶ Subscribe on YouTube</a>
         </div>
@@ -276,19 +274,49 @@
         <a class="read-btn read-btn-alt" href="https://thelawgazette.in/live-in-judgment.html">पूरा फैसला पढ़ें →</a>
     </article>
 
-    <div class="section-heading">पिछले महत्वपूर्ण विषय व संग्रह</div>
-    <div class="archive-box">
-        <ul class="archive-list">
-            <li>📌 <a href="https://thelawgazette.in/">पुलिस गिरफ्तारी नियम व BNSS मार्गदर्शिका</a></li>
-            <li>📌 <a href="https://thelawgazette.in/">चेक बाउंस (138 NI Act) व कानूनी नोटिस के नियम</a></li>
-            <li>📌 <a href="https://thelawgazette.in/">भरण-पोषण (Maintenance) व नागरिक अधिकार गाइड</a></li>
-        </ul>
-    </div>
+    <!-- OLD / PREVIOUS TOPICS SECTION -->
+    <div class="section-heading" id="old-topics">पुराने महत्वपूर्ण कानूनी विषय व संग्रह</div>
+
+    <article class="news-card old-topic-card">
+        <span class="badge-old">📌 पुराना विषय • गिरफ्तारी व प्रक्रिया</span>
+        <h3>पुलिस गिरफ्तारी नियम व BNSS मार्गदर्शिका: गिरफ्तारी से पहले किन नियमों का पालन जरूरी?</h3>
+        <div class="meta">लेखक: Ajit Choudhary | संग्रह: thelawgazette.in</div>
+        <p>
+            गिरफ्तारी के दौरान नागरिक अधिकार, नोटिस की प्रक्रिया, गिरफ्तारी का कारण जानने का हक और मजिस्ट्रेट के समक्ष पेश किए जाने से जुड़े कानूनी प्रावधानों की सरल जानकारी।
+        </p>
+    </article>
+
+    <article class="news-card old-topic-card">
+        <span class="badge-old">📌 पुराना विषय • चेक बाउंस कानून</span>
+        <h3>चेक बाउंस (138 NI Act) व कानूनी नोटिस के नियम: समयसीमा और बचाव के मुख्य बिंदु</h3>
+        <div class="meta">लेखक: Ajit Choudhary | संग्रह: thelawgazette.in</div>
+        <p>
+            चेक dishonour होने के बाद डिमांड नोटिस भेजने की समयसीमा, जवाब दाखिल करने के अधिकार और अदालत में कार्यवाही से जुड़ी व्यावहारिक कानूनी जानकारी।
+        </p>
+    </article>
+
+    <article class="news-card old-topic-card">
+        <span class="badge-old">📌 पुराना विषय • भरण-पोषण व अधिकार</span>
+        <h3>भरण-पोषण (Maintenance) व नागरिक अधिकार गाइड: कानूनी प्रक्रिया और पात्रता</h3>
+        <div class="meta">लेखक: Ajit Choudhary | संग्रह: thelawgazette.in</div>
+        <p>
+            परिवार और आश्रितों के भरण-पोषण से जुड़े कानूनी सिद्धांत, अंतरिम सहायता और न्यायालय में आवेदन की सामान्य प्रक्रिया का संक्षिप्त विवरण।
+        </p>
+    </article>
+
+    <article class="news-card old-topic-card">
+        <span class="badge-old">📌 पुराना विषय • उपभोक्ता संरक्षण</span>
+        <h3>कंज्यूमर फोरम / उपभोक्ता अदालत में शिकायत कैसे करें: सेवा में कमी और अधिकार</h3>
+        <div class="meta">लेखक: Ajit Choudhary | संग्रह: thelawgazette.in</div>
+        <p>
+            खराब उत्पाद या सेवा में लापरवाही होने पर उपभोक्ता के अधिकार, दस्तावेज तैयार करने और उचित मंच पर शिकायत दर्ज करने की आसान मार्गदर्शिका।
+        </p>
+    </article>
 
     <div class="share-box">
         <a
             class="wa-btn"
-            href="https://api.whatsapp.com/send?text=⚖️%20The%20Law%20Gazette%20%E2%80%94%20ताज़ा%20कानूनी%20फैसले%20और%20जजमेंट%20यहाँ%20पढ़ें:%20https://thelawgazzete.in/"
+            href="https://api.whatsapp.com/send?text=⚖️%20The%20Law%20Gazette%20%E2%80%94%20ताज़ा%20कानूनी%20फैसले%20और%20जजमेंट%20यहाँ%20पढ़ें:%20https://thelawgazette.in/"
             target="_blank"
             rel="noopener noreferrer"
         >
