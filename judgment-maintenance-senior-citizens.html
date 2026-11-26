@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>भरण-पोषण और बुजुर्ग माता-पिता के अधिकार | The Law Gazette</title>
+  <meta name="description" content="भरण-पोषण (Maintenance) और बुजुर्ग माता-पिता के सम्मान, सुरक्षा तथा कानूनी अधिकारों पर searchable कानूनी विश्लेषण — लेखक: Ajit Choudhary, The Law Gazette." />
+  <style>
+    :root {
+      --navy: #0f2342;
+      --maroon: #7a1c24;
+      --gold: #b88b2a;
+      --bg: #f6f7fa;
+      --card: #ffffff;
+      --text: #1c2430;
+      --muted: #5a6577;
+      --border: #dfe4ec;
+      --highlight: #fff3b0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans Devanagari", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    /* Sticky Header */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--navy);
+      color: #fff;
+      border-bottom: 3px solid var(--gold);
+    }
+
+    .header-inner {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 14px 18px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-name {
+      font-size: 1.25rem;
+      font-weight: 800;
+      letter-spacing: 0.4px;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .brand-sub {
+      font-size: 0.78rem;
+      color: #e2e8f0;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 14px;
+      font-size: 0.9rem;
+    }
+
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      padding: 6px 10px;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .nav-links a:hover {
+      background: var(--maroon);
+    }
+
+    /* Container */
+    .container {
+      max-width: 980px;
+      margin: 22px auto;
+      padding: 0 16px 40px;
+    }
+
+    /* Search & Filter Box */
+    .search-panel {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 10px rgba(15, 35, 66, 0.05);
+    }
+
+    .search-row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .search-input {
+      flex: 1;
+      min-width: 220px;
+      padding: 11px 14px;
+      border: 1.5px solid var(--border);
+      border-radius: 8px;
+      font-size: 0.98rem;
+      outline: none;
+    }
+
+    .search-input:focus {
+      border-color: var(--navy);
+    }
+
+    .btn {
+      padding: 10px 16px;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      font-size: 0.9rem;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .btn-clear {
+      background: #e9edf4;
+      color: var(--text);
+    }
+
+    .btn-wa {
+      background: #16803c;
+      color: #fff;
+    }
+
+    .filter-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .chip {
+      border: 1px solid var(--border);
+      background: #f8fafc;
+      color: var(--text);
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      cursor: pointer;
+    }
+
+    .chip.active {
+      background: var(--navy);
+      color: #fff;
+      border-color: var(--navy);
+    }
+
+    .search-status {
+      margin-top: 10px;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    /* Article Card */
+    .article-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 24px 20px;
+      box-shadow: 0 3px 14px rgba(15, 35, 66, 0.06);
+    }
+
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+
+    .badge {
+      background: #fdf2f3;
+      color: var(--maroon);
+      border: 1px solid #f2c6ca;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 6px;
+    }
+
+    h1 {
+      font-size: 1.65rem;
+      line-height: 1.35;
+      color: var(--navy);
+      margin-bottom: 10px;
+    }
+
+    .meta-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      font-size: 0.88rem;
+      color: var(--muted);
+      padding-bottom: 16px;
+      margin-bottom: 18px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section-block {
+      margin-bottom: 22px;
+      padding: 14px;
+      border-radius: 10px;
+      background: #fcfdff;
+      border: 1px solid #eef2f7;
+    }
+
+    .section-block h2 {
+      font-size: 1.18rem;
+      color: var(--navy);
+      margin-bottom: 8px;
+      border-left: 4px solid var(--maroon);
+      padding-left: 10px;
+    }
+
+    .section-block p {
+      margin-bottom: 8px;
+    }
+
+    .checklist {
+      margin-top: 8px;
+      padding-left: 20px;
+    }
+
+    .checklist li {
+      margin-bottom: 6px;
+    }
+
+    mark {
+      background: var(--highlight);
+      color: #111;
+      padding: 1px 3px;
+      border-radius: 3px;
+    }
+
+    .share-box {
+      margin-top: 24px;
+      padding: 16px;
+      background: #f4f7fb;
+      border-radius: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .disclaimer {
+      margin-top: 18px;
+      font-size: 0.82rem;
+      color: var(--muted);
+      border-top: 1px dashed var(--border);
+      padding-top: 12px;
+    }
+
+    .no-match {
+      text-align: center;
+      padding: 24px;
+      color: var(--muted);
+      display: none;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.35rem;
+      }
+      .article-card {
+        padding: 18px 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand">
+        <a class="brand-name" href="https://thelawgazzete.in/">THE LAW GAZETTE</a>
+        <span class="brand-sub">thelawgazzete.in • कानूनी विश्लेषण व जजमेंट अपडेट</span>
+      </div>
+      <nav class="nav-links">
+        <a href="https://thelawgazzete.in/">होम</a>
+        <a href="#key-points">मुख्य बिंदु</a>
+        <a href="#doc-checklist">दस्तावेज</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Search & Topic Filter -->
+    <section class="search-panel" aria-label="Judgment Search">
+      <div class="search-row">
+        <input
+          type="search"
+          id="searchInput"
+          class="search-input"
+          placeholder="इस फैसले में शब्द खोजें (जैसे: भरण-पोषण, अंतरिम, दस्तावेज, सम्मान)..."
+        />
+        <button type="button" id="clearBtn" class="btn btn-clear">रीसेट</button>
+      </div>
+
+      <div class="filter-chips" id="filterChips">
+        <button type="button" class="chip active" data-tag="all">सभी खंड</button>
+        <button type="button" class="chip" data-tag="maintenance">भरण-पोषण (Maintenance)</button>
+        <button type="button" class="chip" data-tag="interim">अंतरिम राहत</button>
+        <button type="button" class="chip" data-tag="senior">बुजुर्ग माता-पिता</button>
+        <button type="button" class="chip" data-tag="docs">ज़रूरी दस्तावेज</button>
+      </div>
+
+      <div id="searchStatus" class="search-status">सभी 4 खंड प्रदर्शित हैं। किसी भी शब्द से तुरंत खोजें।</div>
+    </section>
+
+    <!-- Main Judgment Content -->
+    <article class="article-card" id="judgmentArticle">
+      <div class="badge-row">
+        <span class="badge">Judgment Analysis</span>
+        <span class="badge">Family & Senior Citizen Rights</span>
+      </div>
+
+      <h1>भरण-पोषण (Maintenance) और बुजुर्ग माता-पिता के सम्मान व अधिकार: मुख्य कानूनी सिद्धांत</h1>
+
+      <div class="meta-bar">
+        <span><strong>लेखक:</strong> Ajit Choudhary</span>
+        <span><strong>पोर्टल:</strong> The Law Gazette (thelawgazzete.in)</span>
+        <span><strong>अद्यतन:</strong> 26 नवंबर 2026</span>
+      </div>
+
+      <div class="section-block" data-tags="maintenance senior">
+        <h2>1. भरण-पोषण का मूल उद्देश्य और कानूनी दायित्व</h2>
+        <p data-searchable>
+          भरण-पोषण (Maintenance) से जुड़े न्यायिक सिद्धांतों का मुख्य उद्देश्य यह सुनिश्चित करना है कि आश्रित परिजनों और बुजुर्ग माता-पिता को सम्मानपूर्वक जीवन जीने के लिए भोजन, आवास, वस्त्र और चिकित्सा जैसी बुनियादी आवश्यकताएं प्राप्त हों।
+        </p>
+        <p data-searchable>
+          यह किसी प्रकार की दया या एहसान नहीं है, बल्कि जीवन की गरिमा (Dignity of Life) और वैधानिक कर्तव्य से जुड़ा स्पष्ट अधिकार है।
+        </p>
+      </div>
+
+      <div class="section-block" data-tags="interim maintenance">
+        <h2>2. अंतरिम भरण-पोषण (Interim Maintenance) का महत्व</h2>
+        <p data-searchable>
+          कानूनी कार्यवाही के अंतिम निस्तारण में कई बार समय लग सकता है, जबकि आवेदक की तात्कालिक आर्थिक ज़रूरतें तुरंत सामने रहती हैं। ऐसे में अंतरिम राहत (Interim Relief) आवेदक को तत्काल सहारा देने का काम करती है।
+        </p>
+        <p data-searchable>
+          अदालत द्वारा निर्णय करते समय पक्षकारों की आय, जीवन स्तर, आश्रितों की संख्या और वास्तविक खर्चों जैसे तथ्यों को ध्यान में रखा जाता है।
+        </p>
+      </div>
+
+      <div class="section-block" id="doc-checklist" data-tags="docs maintenance">
+        <h2>3. मामले की तैयारी के लिए ज़रूरी दस्तावेज (Extra Practical Guide)</h2>
+        <p data-searchable>
+          किसी भी भरण-पोषण या बुजुर्गों के अधिकार से जुड़े मामले में तथ्यों को स्पष्ट और प्रमाणित रखने के लिए प्राथमिक कागज़ात व्यवस्थित होना मददगार होता है:
+        </p>
+        <ul class="checklist" data-searchable>
+          <li><strong>पहचान और संबंध प्रमाण:</strong> आधार/पहचान पत्र और पारिवारिक संबंध दर्शाने वाले अभिलेख।</li>
+          <li><strong>आय और खर्च विवरण:</strong> आय से जुड़े उपलब्ध प्रमाण, बैंक विवरण और दैनिक/चिकित्सा खर्चों का रिकॉर्ड।</li>
+          <li><strong>मेडिकल रिकॉर्ड:</strong> उम्र या बीमारी से जुड़े उपचार और दवाइयों से संबंधित पर्चियां व रिपोर्ट।</li>
+        </ul>
+      </div>
+
+      <div class="section-block" id="key-points" data-tags="senior">
+        <h2>4. बुजुर्ग माता-पिता का सम्मान, सुरक्षा और समयबद्ध सहायता</h2>
+        <p data-searchable>
+          बढ़ती उम्र के साथ जब देखभाल, स्वास्थ्य और आर्थिक सहारे की आवश्यकता बढ़ती है, तब बुजुर्ग माता-पिता का सम्मान और सुरक्षा बनाए रखना परिवार व कानून दोनों की प्राथमिक जिम्मेदारी बन जाती है।
+        </p>
+        <p data-searchable>
+          समय पर सही कानूनी जानकारी और सुव्यवस्थित कदम परिवारों को अनावश्यक विवाद और लंबी परेशानियों से बचाने में सहायक होते हैं।
+        </p>
+      </div>
+
+      <div id="noMatchMsg" class="no-match">
+        इस खोज शब्द से मेल खाने वाला कोई अंश नहीं मिला। कृपया दूसरा शब्द या "रीसेट" बटन आज़माएं।
+      </div>
+
+      <div class="share-box">
+        <div>
+          <strong>The Law Gazette</strong> — और कानूनी लेखों के लिए विज़िट करें: <strong>thelawgazzete.in</strong>
+        </div>
+        <a
+          id="waShareLink"
+          class="btn btn-wa"
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://api.whatsapp.com/send?text=%E0%A4%AD%E0%A4%B0%E0%A4%A3-%E0%A4%AA%E0%A5%8B%E0%A4%B7%E0%A4%A3%20%E0%A4%94%E0%A4%B0%20%E0%A4%AC%E0%A5%81%E0%A4%9C%E0%A5%81%E0%A4%B0%E0%A5%8D%E0%A4%97%20%E0%A4%AE%E0%A4%BE%E0%A4%A4%E0%A4%BE-%E0%A4%AA%E0%A4%BF%E0%A4%A4%E0%A4%BE%20%E0%A4%95%E0%A5%87%20%E0%A4%85%E0%A4%A7%E0%A4%BF%E0%A4%95%E0%A4%BE%E0%A4%B0%20%E0%A4%AA%E0%A4%B0%20%E0%A4%B2%E0%A5%87%E0%A4%96%20%E0%A4%AA%E0%A4%A2%E0%A4%BC%E0%A5%87%E0%A4%82%3A%20https%3A%2F%2Fthelawgazzete.in%2F"
+        >
+          WhatsApp पर शेयर करें
+        </a>
+      </div>
+
+      <p class="disclaimer">
+        नोट: यह सामग्री केवल सामान्य कानूनी जागरूकता और शैक्षणिक जानकारी के उद्देश्य से प्रस्तुत की गई है; यह औपचारिक विधिक परामर्श नहीं है। — लेखक: Ajit Choudhary | https://thelawgazzete.in/
+      </p>
+    </article>
+  </main>
+
+  <script>
+    (function () {
+      const searchInput = document.getElementById("searchInput");
+      const clearBtn = document.getElementById("clearBtn");
+      const chips = document.querySelectorAll("#filterChips .chip");
+      const blocks = document.querySelectorAll("#judgmentArticle .section-block");
+      const searchStatus = document.getElementById("searchStatus");
+      const noMatchMsg = document.getElementById("noMatchMsg");
+
+      const searchableEls = Array.from(document.querySelectorAll("[data-searchable]"));
+      const originalHtmlMap = new Map();
+      searchableEls.forEach((el) => originalHtmlMap.set(el, el.innerHTML));
+
+      let activeTag = "all";
+
+      function escapeRegExp(str) {
+        return str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+      }
+
+      function applyFilterAndSearch() {
+        const query = searchInput.value.trim();
+        const lowerQuery = query.toLowerCase();
+
+        // Restore clean HTML first
+        searchableEls.forEach((el) => {
+          el.innerHTML = originalHtmlMap.get(el);
+        });
+
+        let visibleBlocks = 0;
+
+        blocks.forEach((block) => {
+          const tags = (block.getAttribute("data-tags") || "").split(/\s+/);
+          const tagMatches = activeTag === "all" || tags.includes(activeTag);
+          const blockText = block.textContent.toLowerCase();
+          const textMatches = !lowerQuery || blockText.includes(lowerQuery);
+
+          if (tagMatches && textMatches) {
+            block.style.display = "";
+            visibleBlocks++;
+
+            if (query) {
+              const regex = new RegExp(`(${escapeRegExp(query)})`, "gi");
+              block.querySelectorAll("[data-searchable]").forEach((el) => {
+                // Highlight text nodes safely
+                const walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
+                const textNodes = [];
+                let node;
+                while ((node = walker.nextNode())) {
+                  if (node.nodeValue.trim() && node.parentNode.tagName !== "MARK") {
+                    textNodes.push(node);
+                  }
+                }
+                textNodes.forEach((tNode) => {
+                  if (tNode.nodeValue.toLowerCase().includes(lowerQuery)) {
+                    const span = document.createElement("span");
+                    span.innerHTML = tNode.nodeValue.replace(regex, "<mark>$1</mark>");
+                    tNode.parentNode.replaceChild(span, tNode);
+                  }
+                });
+              });
+            }
+          } else {
+            block.style.display = "none";
+          }
+        });
+
+        noMatchMsg.style.display = visibleBlocks === 0 ? "block" : "none";
+
+        if (query && activeTag !== "all") {
+          searchStatus.textContent = `"${query}" और चुने गए फ़िल्टर पर ${visibleBlocks} खंड मिले।`;
+        } else if (query) {
+          searchStatus.textContent = `"${query}" के लिए ${visibleBlocks} खंड मिले।`;
+        } else if (activeTag !== "all") {
+          searchStatus.textContent = `चुने गए विषय पर ${visibleBlocks} खंड दिख रहे हैं।`;
+        } else {
+          searchStatus.textContent = `सभी ${blocks.length} खंड प्रदर्शित हैं। किसी भी शब्द से तुरंत खोजें।`;
+        }
+      }
+
+      searchInput.addEventListener("input", applyFilterAndSearch);
+
+      clearBtn.addEventListener("click", function () {
+        searchInput.value = "";
+        activeTag = "all";
+        chips.forEach((c) => c.classList.remove("active"));
+        document.querySelector('#filterChips .chip[data-tag="all"]').classList.add("active");
+        applyFilterAndSearch();
+      });
+
+      chips.forEach((chip) => {
+        chip.addEventListener("click", function () {
+          chips.forEach((c) => c.classList.remove("active"));
+          this.classList.add("active");
+          activeTag = this.getAttribute("data-tag");
+          applyFilterAndSearch();
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
