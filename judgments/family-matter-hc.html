@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>पारिवारिक विवाद (Family Matter) व उच्च न्यायालय के सिद्धांत | The Law Gazette</title>
+  <meta
+    name="description"
+    content="पारिवारिक विवाद, भरण-पोषण, बच्चे की अभिरक्षा/मुलाकात और मध्यस्थता पर उच्च न्यायालय के न्यायिक सिद्धांतों का searchable विश्लेषण — The Law Gazette."
+  />
+  <style>
+    :root {
+      --navy: #0f2342;
+      --maroon: #7a1c24;
+      --gold: #b88b2a;
+      --bg: #f4f6fa;
+      --card: #ffffff;
+      --text: #1c2430;
+      --muted: #586577;
+      --border: #dce2ec;
+      --highlight: #fff3b0;
+      --soft-box: #eef3fa;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans Devanagari", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    /* Reading Progress Bar */
+    .read-progress-track {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: rgba(15, 35, 66, 0.12);
+      z-index: 220;
+    }
+
+    .read-progress-fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, var(--maroon), var(--gold));
+      transition: width 0.12s ease-out;
+    }
+
+    /* Header */
+    .top-header {
+      position: sticky;
+      top: 4px;
+      z-index: 160;
+      background: var(--navy);
+      color: #ffffff;
+      border-bottom: 3px solid var(--gold);
+      box-shadow: 0 2px 10px rgba(15, 35, 66, 0.15);
+    }
+
+    .header-wrap {
+      max-width: 1020px;
+      margin: 0 auto;
+      padding: 14px 18px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .site-brand {
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: #ffffff;
+      text-decoration: none;
+      display: block;
+      letter-spacing: 0.3px;
+    }
+
+    .site-sub {
+      font-size: 0.78rem;
+      color: #e2e8f0;
+    }
+
+    .top-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .top-nav a {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 0.88rem;
+      padding: 6px 11px;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.09);
+    }
+
+    .top-nav a:hover {
+      background: var(--maroon);
+    }
+
+    /* Main Container */
+    .main-wrap {
+      max-width: 1020px;
+      margin: 24px auto;
+      padding: 0 16px 48px;
+    }
+
+    /* Search & Tool Panel */
+    .controls-panel {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 18px;
+      margin-bottom: 20px;
+      box-shadow: 0 3px 12px rgba(15, 35, 66, 0.05);
+    }
+
+    .search-bar-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .search-field {
+      flex: 1;
+      min-width: 230px;
+      padding: 11px 14px;
+      border: 1.5px solid var(--border);
+      border-radius: 9px;
+      font-size: 0.96rem;
+      color: var(--text);
+      outline: none;
+    }
+
+    .search-field:focus {
+      border-color: var(--navy);
+    }
+
+    .ui-btn {
+      border: none;
+      border-radius: 9px;
+      padding: 10px 14px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .btn-light {
+      background: #e8edf5;
+      color: var(--navy);
+    }
+
+    .btn-dark {
+      background: var(--navy);
+      color: #ffffff;
+    }
+
+    .btn-wa {
+      background: #16803c;
+      color: #ffffff;
+    }
+
+    .chips-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .topic-chip {
+      border: 1px solid var(--border);
+      background: #f8fafc;
+      color: var(--text);
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 0.83rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .topic-chip.active {
+      background: var(--navy);
+      color: #ffffff;
+      border-color: var(--navy);
+    }
+
+    .result-info {
+      margin-top: 12px;
+      font-size: 0.86rem;
+      color: var(--muted);
+    }
+
+    /* Article Card */
+    .article-box {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 26px 22px;
+      box-shadow: 0 4px 18px rgba(15, 35, 66, 0.06);
+    }
+
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .badge-item {
+      background: #fdf2f3;
+      color: var(--maroon);
+      border: 1px solid #f2c6ca;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 6px;
+    }
+
+    h1 {
+      font-size: 1.7rem;
+      line-height: 1.35;
+      color: var(--navy);
+      margin-bottom: 12px;
+    }
+
+    .meta-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 0.88rem;
+      color: var(--muted);
+      padding-bottom: 16px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .highlight-box {
+      background: var(--soft-box);
+      border-left: 4px solid var(--navy);
+      border-radius: 10px;
+      padding: 16px;
+      margin-bottom: 22px;
+    }
+
+    .highlight-box h2 {
+      font-size: 1.08rem;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+
+    .highlight-box ul {
+      padding-left: 20px;
+    }
+
+    .highlight-box li {
+      margin-bottom: 6px;
+    }
+
+    .law-section {
+      margin-bottom: 20px;
+      padding: 16px;
+      border-radius: 12px;
+      background: #fcfdff;
+      border: 1px solid #e9eef5;
+    }
+
+    .law-section h2 {
+      font-size: 1.18rem;
+      color: var(--navy);
+      margin-bottom: 10px;
+      padding-left: 10px;
+      border-left: 4px solid var(--maroon);
+    }
+
+    .law-section p {
+      margin-bottom: 10px;
+    }
+
+    .law-list {
+      padding-left: 20px;
+      margin-top: 6px;
+    }
+
+    .law-list li {
+      margin-bottom: 7px;
+    }
+
+    .two-col-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 14px;
+      margin-top: 10px;
+    }
+
+    .mini-card {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px;
+    }
+
+    .mini-card h3 {
+      font-size: 1rem;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+
+    mark {
+      background: var(--highlight);
+      color: #111111;
+      padding: 1px 3px;
+      border-radius: 3px;
+    }
+
+    .no-result {
+      display: none;
+      text-align: center;
+      padding: 24px;
+      color: var(--muted);
+      background: #f8fafc;
+      border-radius: 10px;
+      margin-top: 12px;
+    }
+
+    .share-banner {
+      margin-top: 24px;
+      padding: 16px;
+      background: #f4f7fb;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .disclaimer-note {
+      margin-top: 18px;
+      padding-top: 12px;
+      border-top: 1px dashed var(--border);
+      font-size: 0.84rem;
+      color: var(--muted);
+    }
+
+    /* Final Author Box: Name + Photo */
+    .author-footer-box {
+      margin-top: 22px;
+      padding: 16px;
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--navy);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .author-photo-circle {
+      width: 74px;
+      height: 74px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--gold);
+      background: var(--navy);
+      flex-shrink: 0;
+    }
+
+    .author-details .role-tag {
+      font-size: 0.78rem;
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    .author-details .full-name {
+      font-size: 1.12rem;
+      font-weight: 800;
+      color: var(--navy);
+      margin: 2px 0;
+    }
+
+    .author-details .brand-line {
+      font-size: 0.88rem;
+      color: var(--text);
+    }
+
+    @media print {
+      .read-progress-track,
+      .top-header,
+      .controls-panel,
+      .share-banner,
+      .ui-btn {
+        display: none !important;
+      }
+      body {
+        background: #ffffff;
+      }
+      .article-box {
+        border: none;
+        box-shadow: none;
+        padding: 0;
+      }
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.38rem;
+      }
+      .article-box {
+        padding: 18px 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="read-progress-track" aria-hidden="true">
+    <div class="read-progress-fill" id="progressBar"></div>
+  </div>
+
+  <header class="top-header">
+    <div class="header-wrap">
+      <div>
+        <a href="https://thelawgazette.in/" class="site-brand">The Law Gazette</a>
+        <span class="site-sub">The Law Gazette • उच्च न्यायालय व पारिवारिक विधि विश्लेषण</span>
+      </div>
+      <nav class="top-nav" aria-label="Page Sections">
+        <a href="https://thelawgazette.in/">होम</a>
+        <a href="#sec-jurisdiction">क्षेत्राधिकार</a>
+        <a href="#sec-mediation">मध्यस्थता</a>
+        <a href="#sec-dos-donts">व्यावहारिक सावधानी</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-wrap">
+    <section class="controls-panel" aria-label="Search and Filters">
+      <div class="search-bar-row">
+        <input
+          type="search"
+          id="searchBox"
+          class="search-field"
+          placeholder="इस लेख में शब्द खोजें (जैसे: मध्यस्थता, भरण-पोषण, अभिरक्षा, प्रक्रिया)..."
+        />
+        <button type="button" id="resetBtn" class="ui-btn btn-light">रीसेट</button>
+        <button type="button" id="fontBtn" class="ui-btn btn-dark">फ़ॉन्ट आकार</button>
+        <button type="button" id="printBtn" class="ui-btn btn-light">प्रिंट / PDF</button>
+      </div>
+
+      <div class="chips-wrap" id="filterBar">
+        <button type="button" class="topic-chip active" data-cat="all">सभी खंड</button>
+        <button type="button" class="topic-chip" data-cat="jurisdiction">उच्च न्यायालय व प्रक्रिया</button>
+        <button type="button" class="topic-chip" data-cat="mediation">मध्यस्थता व सुलह</button>
+        <button type="button" class="topic-chip" data-cat="maintenance">भरण-पोषण व संतान</button>
+        <button type="button" class="topic-chip" data-cat="practice">सावधानी व रिकॉर्ड</button>
+      </div>
+
+      <div id="statusText" class="result-info">सभी 4 खंड प्रदर्शित हैं। किसी भी शब्द से तुरंत खोजें।</div>
+    </section>
+
+    <article class="article-box" id="familyJudgmentArticle">
+      <div class="badges">
+        <span class="badge-item">The Law Gazette</span>
+        <span class="badge-item">High Court Family Jurisprudence</span>
+      </div>
+
+      <h1>पारिवारिक विवादों (Family Matters) में उच्च न्यायालयों के प्रमुख न्यायिक सिद्धांत और व्यावहारिक मार्गदर्शन</h1>
+
+      <div class="meta-strip">
+        <span><strong>लेखक:</strong> Ajit Choudhary</span>
+        <span><strong>प्रकाशन:</strong> The Law Gazette</span>
+        <span><strong>दिनांक:</strong> 27 नवंबर 2026</span>
+      </div>
+
+      <aside class="highlight-box" data-searchable>
+        <h2>मुख्य सार (Key Takeaways)</h2>
+        <ul>
+          <li>पारिवारिक मुकदमों में उच्च न्यायालय प्रक्रिया की निष्पक्षता, शीघ्र निस्तारण और पक्षकारों के अधिकारों के संतुलन पर जोर देते हैं।</li>
+          <li>अनावश्यक तकनीकी अड़चनों या लंबी देरी से बचते हुए विवाद के वास्तविक सार को समझने पर ध्यान दिया जाता है।</li>
+          <li>सुलह और मध्यस्थता (Mediation) के माध्यम से पारिवारिक रिश्तों या संतान के हित में व्यावहारिक समाधान तलाशने को प्रोत्साहन मिलता है।</li>
+          <li>भरण-पोषण और बच्चे से जुड़े आदेशों में तथ्यों, आय-व्यय के विवरण और बच्चे के कल्याण को प्राथमिकता दी जाती है।</li>
+        </ul>
+      </aside>
+
+      <section class="law-section" id="sec-jurisdiction" data-tags="jurisdiction" data-searchable>
+        <h2>1. पारिवारिक मामलों में उच्च न्यायालय की पर्यवेक्षी व पुनरीक्षण भूमिका</h2>
+        <p>
+          पारिवारिक न्यायालयों या अधीनस्थ अदालतों से जुड़े मामलों में उच्च न्यायालयों के समक्ष अंतरिम आदेशों, प्रक्रियात्मक त्रुटियों, क्षेत्राधिकार या शीघ्र सुनवाई से संबंधित याचिकाएं आती रहती हैं। न्यायिक सिद्धांतों के अनुसार उच्च न्यायालय यह देखते हैं कि कार्यवाही कानून के अनुरूप और बिना अनावश्यक विलंब के आगे बढ़ रही है या नहीं।
+        </p>
+        <ul class="law-list">
+          <li><strong>शीघ्र निस्तारण की अपेक्षा:</strong> पारिवारिक विवादों को लंबे समय तक लटकाए रखने के बजाय समयबद्ध सुनवाई का महत्व रहता है।</li>
+          <li><strong>प्राकृतिक न्याय व सुनवाई का अवसर:</strong> किसी भी पक्षकार को बिना सुने या रिकॉर्ड देखे प्रतिकूल प्रभाव डालने से बचने पर बल दिया जाता है।</li>
+          <li><strong>विधिक सीमा का सम्मान:</strong> रिट या पुनरीक्षण क्षेत्राधिकार का उपयोग तथ्यात्मक विवादों में हस्तक्षेप के बजाय न्यायिक संतुलन बनाए रखने के लिए किया जाता है।</li>
+        </ul>
+      </section>
+
+      <section class="law-section" id="sec-mediation" data-tags="mediation jurisdiction" data-searchable>
+        <h2>2. मध्यस्थता (Mediation) और सौहार्दपूर्ण समाधान का महत्व</h2>
+        <p>
+          पारिवारिक विवाद केवल कानूनी दावों तक सीमित नहीं रहते, बल्कि उनका भावनात्मक और सामाजिक प्रभाव पूरे परिवार पर पड़ता है। इसलिए उच्च न्यायालयों द्वारा कई मामलों में पक्षकारों को मध्यस्थता केंद्र या समझौते के अवसर का गंभीरता से उपयोग करने की सलाह दी जाती है।
+        </p>
+        <ul class="law-list">
+          <li><strong>स्वैच्छिक व स्पष्ट शर्तें:</strong> समझौते की शर्तें स्पष्ट, व्यावहारिक और भविष्य में विवाद न बढ़ाने वाली होनी चाहिए।</li>
+          <li><strong>संतान के हित की सुरक्षा:</strong> यदि बच्चे शामिल हों, तो उनके भरण-पोषण, शिक्षा और मुलाकात से जुड़े बिंदु स्पष्ट रूप से तय होने चाहिए।</li>
+          <li><strong>अदालती अभिलेख में दर्ज होना:</strong> आपसी सहमति से हुए समझौते को सही विधिक रूप में रिकॉर्ड पर लाना आवश्यक रहता है।</li>
+        </ul>
+      </section>
+
+      <section class="law-section" data-tags="maintenance" data-searchable>
+        <h2>3. भरण-पोषण (Maintenance) और संतान से जुड़े न्यायिक मानक</h2>
+        <p>
+          वैवाहिक या पारिवारिक कार्यवाही के दौरान अंतरिम भरण-पोषण तथा बच्चे की मुलाकात/अभिरक्षा से जुड़े मामलों में न्यायालय उपलब्ध सामग्री और दोनों पक्षों की स्थिति का तुलनात्मक मूल्यांकन करते हैं।
+        </p>
+        <ul class="law-list">
+          <li><strong>आर्थिक क्षमता व आवश्यकता:</strong> आवेदक की वास्तविक जरूरत और दूसरे पक्ष की आय व दायित्वों के बीच संतुलन देखा जाता है।</li>
+          <li><strong>बच्चे का सर्वोत्तम हित:</strong> अभिरक्षा या मुलाकात के आदेशों में बच्चे की दिनचर्या, स्कूल और मानसिक सहजता सबसे ऊपर रखी जाती है।</li>
+          <li><strong>आदेशों का अनुपालन:</strong> न्यायालय द्वारा पारित अंतरिम या अंतिम निर्देशों का सम्मान और पालन महत्वपूर्ण होता है।</li>
+        </ul>
+      </section>
+
+      <section class="law-section" id="sec-dos-donts" data-tags="practice maintenance" data-searchable>
+        <h2>4. पक्षकारों के लिए व्यावहारिक सावधानी (Extra Practical Guide)</h2>
+        <p>
+          पारिवारिक मामले की तैयारी के दौरान व्यवस्थित कागज़ात और संयमित दृष्टिकोण पक्षकारों को अनावश्यक उलझनों से बचाने में मदद करते हैं:
+        </p>
+        <div class="two-col-grid">
+          <div class="mini-card">
+            <h3>क्या करें (Good Practices)</h3>
+            <ul class="law-list">
+              <li>सभी नोटिस, आदेशों की प्रतियां और प्रासंगिक दस्तावेज फाइल में क्रमवार रखें।</li>
+              <li>आय, खर्च और पारिवारिक तथ्यों का स्पष्ट व सच्चा विवरण तैयार रखें।</li>
+              <li>सुनवाई की तारीखों और अगली कार्रवाई का नियमित रिकॉर्ड रखें।</li>
+            </ul>
+          </div>
+          <div class="mini-card">
+            <h3>क्या न करें (Avoid Pitfalls)</h3>
+            <ul class="law-list">
+              <li>अपुष्ट या बेबुनियाद आरोपों पर निर्भर न रहें।</li>
+              <li>महत्वपूर्ण दस्तावेज या आदेश की प्रतियां लापरवाही से न छोड़ें।</li>
+              <li>कानूनी प्रक्रिया की समय-सीमा और निर्देशों को हल्के में न लें।</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <div id="noMatchBox" class="no-result">
+        इस खोज शब्द या फ़िल्टर से मेल खाने वाला कोई खंड नहीं मिला। कृपया दूसरा शब्द लिखें या "रीसेट" दबाएं।
+      </div>
+
+      <div class="share-banner">
+        <div>
+          <strong>The Law Gazette</strong> — नियमित कानूनी लेखों व अपडेट्स के लिए विज़िट करें: <strong>thelawgazette.in</strong>
+        </div>
+        <a
+          class="ui-btn btn-wa"
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://api.whatsapp.com/send?text=The%20Law%20Gazette%20%E2%80%94%20%E0%A4%AA%E0%A4%BE%E0%A4%B0%E0%A4%BF%E0%A4%B5%E0%A4%BE%E0%A4%B0%E0%A4%BF%E0%A4%95%20%E0%A4%B5%E0%A4%BF%E0%A4%B5%E0%A4%BE%E0%A4%A6%20(Family%20Matter)%20%E0%A4%94%E0%A4%B0%20%E0%A4%89%E0%A4%9A%E0%A5%8D%E0%A4%9A%20%E0%A4%A8%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%AF%E0%A4%BE%E0%A4%B2%E0%A4%AF%20%E0%A4%95%E0%A5%87%20%E0%A4%B8%E0%A4%BF%E0%A4%A6%E0%A5%8D%E0%A4%A7%E0%A4%BE%E0%A4%82%E0%A4%A4%3A%20https%3A%2F%2Fthelawgazette.in%2F"
+        >
+          WhatsApp पर शेयर करें
+        </a>
+      </div>
+
+      <p class="disclaimer-note">
+        अस्वीकरण: यह सामग्री केवल सामान्य कानूनी जागरूकता और शैक्षणिक जानकारी के उद्देश्य से प्रस्तुत की गई है; यह औपचारिक विधिक परामर्श नहीं है। — The Law Gazette
+      </p>
+
+      <!-- Final Author Section: Name + Photo -->
+      <footer class="author-footer-box" aria-label="Author Details">
+        <img
+          src="../ajit-choudhary.jpg"
+          alt="Ajit Choudhary"
+          class="author-photo-circle"
+          onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2274%22 height=%2274%22 viewBox=%220 0 74 74%22><rect width=%2274%22 height=%2274%22 fill=%22%230f2342%22/><text x=%2237%22 y=%2244%22 font-size=%2224%22 font-family=%22sans-serif%22 fill=%22%23ffffff%22 text-anchor=%22middle%22>AC</text></svg>';"
+        />
+        <div class="author-details">
+          <div class="role-tag">लेखक / Author</div>
+          <div class="full-name">Ajit Choudhary</div>
+          <div class="brand-line">The Law Gazette • thelawgazette.in</div>
+        </div>
+      </footer>
+    </article>
+  </main>
+
+  <script>
+    (function () {
+      const searchBox = document.getElementById("searchBox");
+      const resetBtn = document.getElementById("resetBtn");
+      const fontBtn = document.getElementById("fontBtn");
+      const printBtn = document.getElementById("printBtn");
+      const chips = document.querySelectorAll("#filterBar .topic-chip");
+      const sections = document.querySelectorAll("#familyJudgmentArticle .law-section");
+      const statusText = document.getElementById("statusText");
+      const noMatchBox = document.getElementById("noMatchBox");
+      const progressBar = document.getElementById("progressBar");
+
+      const searchTargets = Array.from(document.querySelectorAll("[data-searchable]"));
+      const initialHtmlMap = new Map();
+      searchTargets.forEach((el) => initialHtmlMap.set(el, el.innerHTML));
+
+      let activeCategory = "all";
+      let largeText = false;
+
+      function escapeReg(str) {
+        return str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+      }
+
+      function updateView() {
+        const raw = searchBox.value.trim();
+        const lower = raw.toLowerCase();
+
+        searchTargets.forEach((el) => {
+          el.innerHTML = initialHtmlMap.get(el);
+        });
+
+        let visibleCount = 0;
+
+        sections.forEach((sec) => {
+          const tags = (sec.getAttribute("data-tags") || "").split(/\s+/);
+          const catMatch = activeCategory === "all" || tags.includes(activeCategory);
+          const textMatch = !lower || sec.textContent.toLowerCase().includes(lower);
+
+          if (catMatch && textMatch) {
+            sec.style.display = "";
+            visibleCount++;
+
+            if (raw) {
+              const regex = new RegExp(`(${escapeReg(raw)})`, "gi");
+              sec.querySelectorAll("p, li").forEach((node) => {
+                const walker = document.createTreeWalker(node, NodeFilter.SHOW_TEXT);
+                const textNodes = [];
+                let current;
+                while ((current = walker.nextNode())) {
+                  if (current.nodeValue.trim() && current.parentNode.tagName !== "MARK") {
+                    textNodes.push(current);
+                  }
+                }
+                textNodes.forEach((tNode) => {
+                  if (tNode.nodeValue.toLowerCase().includes(lower)) {
+                    const span = document.createElement("span");
+                    span.innerHTML = tNode.nodeValue.replace(regex, "<mark>$1</mark>");
+                    tNode.parentNode.replaceChild(span, tNode);
+                  }
+                });
+              });
+            }
+          } else {
+            sec.style.display = "none";
+          }
+        });
+
+        noMatchBox.style.display = visibleCount === 0 ? "block" : "none";
+
+        if (raw && activeCategory !== "all") {
+          statusText.textContent = `"${raw}" और चुने गए खंड पर ${visibleCount} विषय मिले।`;
+        } else if (raw) {
+          statusText.textContent = `"${raw}" के लिए ${visibleCount} विषय मिले।`;
+        } else if (activeCategory !== "all") {
+          statusText.textContent = `चुने गए फ़िल्टर पर ${visibleCount} विषय दिख रहे हैं।`;
+        } else {
+          statusText.textContent = `सभी ${sections.length} खंड प्रदर्शित हैं। किसी भी शब्द से तुरंत खोजें।`;
+        }
+      }
+
+      searchBox.addEventListener("input", updateView);
+
+      resetBtn.addEventListener("click", function () {
+        searchBox.value = "";
+        activeCategory = "all";
+        chips.forEach((c) => c.classList.remove("active"));
+        document.querySelector('#filterBar .topic-chip[data-cat="all"]').classList.add("active");
+        updateView();
+      });
+
+      chips.forEach((chip) => {
+        chip.addEventListener("click", function () {
+          chips.forEach((c) => c.classList.remove("active"));
+          this.classList.add("active");
+          activeCategory = this.getAttribute("data-cat");
+          updateView();
+        });
+      });
+
+      fontBtn.addEventListener("click", function () {
+        largeText = !largeText;
+        document.body.style.fontSize = largeText ? "18px" : "16px";
+      });
+
+      printBtn.addEventListener("click", function () {
+        window.print();
+      });
+
+      window.addEventListener("scroll", function () {
+        const totalScrollable = document.documentElement.scrollHeight - window.innerHeight;
+        const pct = totalScrollable > 0 ? (window.scrollY / totalScrollable) * 100 : 0;
+        progressBar.style.width = `${Math.min(100, Math.max(0, pct))}%`;
+      });
+    })();
+  </script>
+</body>
+</html>
