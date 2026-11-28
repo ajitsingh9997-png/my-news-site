@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>संपत्ति कब्ज़ा व वैधानिक अधिकार (Possession & Legal Title) | The Law Gazette</title>
+  <meta
+    name="description"
+    content="संपत्ति के शांतिपूर्ण कब्ज़े, स्वामित्व अधिकारों, अंतरिम संरक्षण और दस्तावेजी साक्ष्यों पर searchable कानूनी विश्लेषण — The Law Gazette।"
+  />
+  <style>
+    :root {
+      --navy: #0f2342;
+      --maroon: #7a1c24;
+      --gold: #b88b2a;
+      --bg: #f4f6fa;
+      --card: #ffffff;
+      --text: #1c2430;
+      --muted: #586577;
+      --border: #dce2ec;
+      --highlight: #fff3b0;
+      --soft: #eef3fa;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans Devanagari", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .progress-track {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: rgba(15, 35, 66, 0.12);
+      z-index: 220;
+    }
+
+    .progress-fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, var(--maroon), var(--gold));
+      transition: width 0.12s ease-out;
+    }
+
+    .top-header {
+      position: sticky;
+      top: 4px;
+      z-index: 160;
+      background: var(--navy);
+      color: #ffffff;
+      border-bottom: 3px solid var(--gold);
+      box-shadow: 0 2px 10px rgba(15, 35, 66, 0.15);
+    }
+
+    .header-inner {
+      max-width: 1020px;
+      margin: 0 auto;
+      padding: 14px 18px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .brand-link {
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: #ffffff;
+      text-decoration: none;
+      display: block;
+    }
+
+    .brand-sub {
+      font-size: 0.78rem;
+      color: #e2e8f0;
+    }
+
+    .nav-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .nav-bar a {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 0.88rem;
+      padding: 6px 11px;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.09);
+    }
+
+    .nav-bar a:hover {
+      background: var(--maroon);
+    }
+
+    .page-main {
+      max-width: 1020px;
+      margin: 24px auto;
+      padding: 0 16px 48px;
+    }
+
+    .search-panel {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 18px;
+      margin-bottom: 20px;
+      box-shadow: 0 3px 12px rgba(15, 35, 66, 0.05);
+    }
+
+    .search-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .search-input {
+      flex: 1;
+      min-width: 230px;
+      padding: 11px 14px;
+      border: 1.5px solid var(--border);
+      border-radius: 9px;
+      font-size: 0.96rem;
+      color: var(--text);
+      outline: none;
+    }
+
+    .search-input:focus {
+      border-color: var(--navy);
+    }
+
+    .btn-ui {
+      border: none;
+      border-radius: 9px;
+      padding: 10px 14px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .btn-gray {
+      background: #e8edf5;
+      color: var(--navy);
+    }
+
+    .btn-navy {
+      background: var(--navy);
+      color: #ffffff;
+    }
+
+    .btn-wa {
+      background: #16803c;
+      color: #ffffff;
+    }
+
+    .filter-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .chip {
+      border: 1px solid var(--border);
+      background: #f8fafc;
+      color: var(--text);
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 0.83rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .chip.active {
+      background: var(--navy);
+      color: #ffffff;
+      border-color: var(--navy);
+    }
+
+    .status-bar {
+      margin-top: 12px;
+      font-size: 0.86rem;
+      color: var(--muted);
+    }
+
+    .article-shell {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 26px 22px;
+      box-shadow: 0 4px 18px rgba(15, 35, 66, 0.06);
+    }
+
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .badge {
+      background: #fdf2f3;
+      color: var(--maroon);
+      border: 1px solid #f2c6ca;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 6px;
+    }
+
+    h1 {
+      font-size: 1.7rem;
+      line-height: 1.35;
+      color: var(--navy);
+      margin-bottom: 12px;
+    }
+
+    .meta-line {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 0.88rem;
+      color: var(--muted);
+      padding-bottom: 16px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .content-section {
+      margin-bottom: 22px;
+      padding: 16px;
+      border-radius: 12px;
+      background: #fcfdff;
+      border: 1px solid #e9eef5;
+    }
+
+    .content-section h2 {
+      font-size: 1.18rem;
+      color: var(--navy);
+      margin-bottom: 10px;
+      padding-left: 10px;
+      border-left: 4px solid var(--maroon);
+    }
+
+    .content-section p {
+      margin-bottom: 10px;
+    }
+
+    .point-list {
+      padding-left: 20px;
+      margin-top: 6px;
+    }
+
+    .point-list li {
+      margin-bottom: 7px;
+    }
+
+    .visual-figure {
+      margin-top: 12px;
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .visual-figure img {
+      width: 100%;
+      max-height: 280px;
+      object-fit: cover;
+      display: block;
+      background: #e8edf5;
+    }
+
+    .visual-figure figcaption {
+      padding: 9px 12px;
+      font-size: 0.84rem;
+      color: var(--muted);
+      border-top: 1px solid #eef2f7;
+    }
+
+    mark {
+      background: var(--highlight);
+      color: #111111;
+      padding: 1px 3px;
+      border-radius: 3px;
+    }
+
+    .empty-msg {
+      display: none;
+      text-align: center;
+      padding: 24px;
+      color: var(--muted);
+      background: #f8fafc;
+      border-radius: 10px;
+      margin-top: 12px;
+    }
+
+    .share-box {
+      margin-top: 24px;
+      padding: 16px;
+      background: #f4f7fb;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .disclaimer-text {
+      margin-top: 18px;
+      padding-top: 12px;
+      border-top: 1px dashed var(--border);
+      font-size: 0.84rem;
+      color: var(--muted);
+    }
+
+    /* Final Author Block: Name + Photo */
+    .author-box {
+      margin-top: 22px;
+      padding: 16px;
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--navy);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .author-img {
+      width: 74px;
+      height: 74px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--gold);
+      background: var(--navy);
+      flex-shrink: 0;
+    }
+
+    .author-info .tag {
+      font-size: 0.78rem;
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    .author-info .name {
+      font-size: 1.12rem;
+      font-weight: 800;
+      color: var(--navy);
+      margin: 2px 0;
+    }
+
+    .author-info .site {
+      font-size: 0.88rem;
+      color: var(--text);
+    }
+
+    @media print {
+      .progress-track,
+      .top-header,
+      .search-panel,
+      .share-box,
+      .btn-ui {
+        display: none !important;
+      }
+      body {
+        background: #ffffff;
+      }
+      .article-shell {
+        border: none;
+        box-shadow: none;
+        padding: 0;
+      }
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.38rem;
+      }
+      .article-shell {
+        padding: 18px 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="progress-track" aria-hidden="true">
+    <div class="progress-fill" id="progressBar"></div>
+  </div>
+
+  <header class="top-header">
+    <div class="header-inner">
+      <div>
+        <a href="https://thelawgazette.in/" class="brand-link">The Law Gazette</a>
+        <span class="brand-sub">The Law Gazette • सिविल व संपत्ति विधि विश्लेषण</span>
+      </div>
+      <nav class="nav-bar" aria-label="Section Links">
+        <a href="https://thelawgazette.in/">होम</a>
+        <a href="#sec-overview">सार</a>
+        <a href="#sec-possession">कब्ज़ा व अधिकार</a>
+        <a href="#sec-evidence">दस्तावेज</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-main">
+    <section class="search-panel" aria-label="Search & Filter Controls">
+      <div class="search-row">
+        <input
+          type="search"
+          id="searchInput"
+          class="search-input"
+          placeholder="इस फैसले में शब्द खोजें (जैसे: कब्ज़ा, स्वामित्व, दस्तावेज, अंतरिम)..."
+        />
+        <button type="button" id="resetBtn" class="btn-ui btn-gray">रीसेट</button>
+        <button type="button" id="fontBtn" class="btn-ui btn-navy">फ़ॉन्ट आकार</button>
+        <button type="button" id="printBtn" class="btn-ui btn-gray">प्रिंट / PDF</button>
+      </div>
+
+      <div class="filter-chips" id="filterChips">
+        <button type="button" class="chip active" data-tag="all">सभी खंड</button>
+        <button type="button" class="chip" data-tag="overview">मुख्य सार</button>
+        <button type="button" class="chip" data-tag="possession">कब्ज़ा व स्वामित्व</button>
+        <button type="button" class="chip" data-tag="evidence">अभिलेख व साक्ष्य</button>
+        <button type="button" class="chip" data-tag="relief">अंतरिम संरक्षण</button>
+      </div>
+
+      <div id="statusMsg" class="status-bar">सभी 4 खंड प्रदर्शित हैं। किसी भी शब्द से तुरंत खोजें।</div>
+    </section>
+
+    <article class="article-shell" id="judgmentArticle">
+      <div class="badge-row">
+        <span class="badge">The Law Gazette</span>
+        <span class="badge">Property & Civil Jurisprudence</span>
+      </div>
+
+      <h1>संपत्ति के कब्ज़े (Possession), स्वामित्व अधिकारों और अंतरिम संरक्षण पर प्रमुख न्यायिक सिद्धांत</h1>
+
+      <div class="meta-line">
+        <span><strong>लेखक:</strong> Ajit Choudhary</span>
+        <span><strong>प्रकाशन:</strong> The Law Gazette</span>
+        <span><strong>दिनांक:</strong> 28 नवंबर 2026</span>
+      </div>
+
+      <section class="content-section" id="sec-overview" data-tags="overview" data-searchable>
+        <h2>1. मुख्य सार व न्यायिक दृष्टिकोण</h2>
+        <p>
+          संपत्ति से जुड़े विवादों में न्यायालय यह देखते हैं कि पक्षकार का अधिकार किस आधार पर स्थापित होता है और क्या विवादित स्थिति में अंतरिम संरक्षण (Interim Protection) की आवश्यकता है। केवल मौखिक दावों के बजाय पंजीकृत दस्तावेजों, राजस्व/नगर रिकॉर्ड और कब्ज़े की वास्तविक स्थिति को गंभीरता से परखा जाता है।
+        </p>
+        <ul class="point-list">
+          <li><strong>विधि की प्रक्रिया का महत्व:</strong> किसी भी कब्ज़े या अधिकार से जुड़े विवाद में उचित कानूनी प्रक्रिया के पालन पर बल दिया जाता है।</li>
+          <li><strong>तथ्यात्मक स्पष्टता:</strong> संपत्ति की चौहद्दी, खसरा/संख्या और कब्ज़े की अवधि का स्पष्ट विवरण महत्वपूर्ण रहता है।</li>
+        </ul>
+        <figure class="visual-figure">
+          <img
+            src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1000&q=80"
+            alt="कानूनी संदर्भ पुस्तकें और न्यायिक अध्ययन"
+            onerror="this.style.display='none';"
+          />
+          <figcaption>विधिक संदर्भ व न्यायिक सिद्धांतों का अध्ययन — The Law Gazette</figcaption>
+        </figure>
+      </section>
+
+      <section class="content-section" id="sec-possession" data-tags="possession relief" data-searchable>
+        <h2>2. शांतिपूर्ण कब्ज़ा (Settled Possession) और स्वामित्व का अंतर</h2>
+        <p>
+          सिविल विधि में स्वामित्व (Title) और कब्ज़े (Possession) से जुड़े सिद्धांत अलग-अलग परिस्थितियों में लागू होते हैं। जहां एक ओर वैध स्वामित्व अभिलेखों से सिद्ध होता है, वहीं दूसरी ओर निरंतर और शांतिपूर्ण कब्ज़े की स्थिति भी कानूनी संरक्षण के दायरे में आ सकती है।
+        </p>
+        <ul class="point-list">
+          <li><strong>अंतरिम निषेधाज्ञा (Temporary Injunction):</strong> मुकदमे के लंबित रहते हुए संपत्ति की स्थिति बदलने या नुकसान पहुँचाने से रोकने के लिए विचार किया जाता है।</li>
+          <li><strong>तीन मुख्य तत्व:</strong> प्राइमा फेसी केस (Prima Facie Case), सुविधा का संतुलन (Balance of Convenience) और अपूरणीय क्षति (Irreparable Loss) का आकलन होता है।</li>
+        </ul>
+        <figure class="visual-figure">
+          <img
+            src="https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&w=1000&q=80"
+            alt="न्यायालय कक्ष और विधिक कार्यवाही का दृश्य"
+            onerror="this.style.display='none';"
+          />
+          <figcaption>न्यायिक प्रक्रिया व साक्ष्यों का मूल्यांकन — The Law Gazette</figcaption>
+        </figure>
+      </section>
+
+      <section class="content-section" id="sec-evidence" data-tags="evidence possession" data-searchable>
+        <h2>3. ज़रूरी दस्तावेज और अभिलेखीय साक्ष्य</h2>
+        <p>
+          संपत्ति या सिविल विवाद में कागज़ात की स्पष्टता सबसे बड़ी ताकत होती है। पक्षकारों के पास संबंधित अभिलेख व्यवस्थित और सुसंगत होने चाहिए:
+        </p>
+        <ul class="point-list">
+          <li><strong>स्वामित्व व लेन-देन पत्र:</strong> पंजीकृत विलेख, आवंटन/हस्तांतरण दस्तावेज और पूर्व श्रृंखला के अभिलेख।</li>
+          <li><strong>राजस्व व कर रसीदें:</strong> भूमि/संपत्ति कर, उपयोगिता बिल और आधिकारिक रिकॉर्ड की प्रमाणित प्रतियां।</li>
+          <li><strong>नक्शा व साइट विवरण:</strong> संपत्ति का स्पष्ट वर्णन, माप और संलग्न फोटो/रिपोर्ट।</li>
+        </ul>
+        <figure class="visual-figure">
+          <img
+            src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1000&q=80"
+            alt="दस्तावेज और कानूनी फाइल की समीक्षा"
+            onerror="this.style.display='none';"
+          />
+          <figcaption>दस्तावेजी प्रमाण व फाइल की व्यवस्थित तैयारी — The Law Gazette</figcaption>
+        </figure>
+      </section>
+
+      <section class="content-section" data-tags="relief evidence" data-searchable>
+        <h2>4. व्यावहारिक सावधानी व अतिरिक्त मार्गदर्शन</h2>
+        <p>
+          विवाद की स्थिति में जल्दबाज़ी या गैर-कानूनी कदम उठाने के बजाय तथ्यों व दस्तावेजों के आधार पर विधिसम्मत रास्ता अपनाना सुरक्षित रहता है:
+        </p>
+        <ul class="point-list">
+          <li>किसी भी नोटिस या वाद-पत्र की प्राप्ति के बाद समय-सीमा का विशेष ध्यान रखें।</li>
+          <li>मूल दस्तावेजों को सुरक्षित रखें और कार्य के लिए सत्यापित प्रतियों का उपयोग करें।</li>
+          <li>बिना प्रमाण के किसी कथन या दावे को आधार न बनाएं।</li>
+        </ul>
+      </section>
+
+      <div id="emptyMatch" class="empty-msg">
+        इस खोज शब्द या फ़िल्टर से मेल खाने वाला कोई खंड नहीं मिला। कृपया दूसरा शब्द लिखें या "रीसेट" दबाएं।
+      </div>
+
+      <div class="share-box">
+        <div>
+          <strong>The Law Gazette</strong> — नियमित कानूनी लेखों व अपडेट्स के लिए विज़िट करें: <strong>thelawgazette.in</strong>
+        </div>
+        <a
+          class="btn-ui btn-wa"
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://api.whatsapp.com/send?text=The%20Law%20Gazette%20%E2%80%94%20%E0%A4%B8%E0%A4%82%E0%A4%AA%E0%A4%A4%E0%A5%8D%E0%A4%A4%E0%A4%BF%20%E0%A4%95%E0%A5%87%20%E0%A4%95%E0%A4%AC%E0%A5%8D%E0%A4%9C%E0%A4%BC%E0%A5%87%20%E0%A4%B5%20%E0%A4%B8%E0%A5%8D%E0%A4%B5%E0%A4%BE%E0%A4%AE%E0%A4%BF%E0%A4%A4%E0%A5%8D%E0%A4%B5%20%E0%A4%85%E0%A4%A7%E0%A4%BF%E0%A4%95%E0%A4%BE%E0%A4%B0%3A%20https%3A%2F%2Fthelawgazette.in%2Fjudgments%2Fproperty-possession-dispute-hc.html"
+        >
+          WhatsApp पर शेयर करें
+        </a>
+      </div>
+
+      <p class="disclaimer-text">
+        अस्वीकरण: यह सामग्री केवल सामान्य कानूनी जागरूकता और शैक्षणिक जानकारी के उद्देश्य से प्रस्तुत की गई है; यह औपचारिक विधिक परामर्श नहीं है। — The Law Gazette
+      </p>
+
+      <!-- Final Author Block: Name + Photo -->
+      <footer class="author-box" aria-label="Author Details">
+        <img
+          src="../ajit-choudhary.jpg"
+          alt="Ajit Choudhary"
+          class="author-img"
+          onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2274%22 height=%2274%22 viewBox=%220 0 74 74%22><rect width=%2274%22 height=%2274%22 fill=%22%230f2342%22/><text x=%2237%22 y=%2244%22 font-size=%2224%22 font-family=%22sans-serif%22 fill=%22%23ffffff%22 text-anchor=%22middle%22>AC</text></svg>';"
+        />
+        <div class="author-info">
+          <div class="tag">लेखक / Author</div>
+          <div class="name">Ajit Choudhary</div>
+          <div class="site">The Law Gazette • thelawgazette.in</div>
+        </div>
+      </footer>
+    </article>
+  </main>
+
+  <script>
+    (function () {
+      const searchInput = document.getElementById("searchInput");
+      const resetBtn = document.getElementById("resetBtn");
+      const fontBtn = document.getElementById("fontBtn");
+      const printBtn = document.getElementById("printBtn");
+      const chips = document.querySelectorAll("#filterChips .chip");
+      const sections = document.querySelectorAll("#judgmentArticle .content-section");
+      const statusMsg = document.getElementById("statusMsg");
+      const emptyMatch = document.getElementById("emptyMatch");
+      const progressBar = document.getElementById("progressBar");
+
+      const searchTargets = Array.from(document.querySelectorAll("[data-searchable]"));
+      const snapshotMap = new Map();
+      searchTargets.forEach((el) => snapshotMap.set(el, el.innerHTML));
+
+      let activeTag = "all";
+      let largeFont = false;
+
+      function escapeRegExp(str) {
+        return str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+      }
+
+      function applySearchAndFilter() {
+        const raw = searchInput.value.trim();
+        const lower = raw.toLowerCase();
+
+        searchTargets.forEach((el) => {
+          el.innerHTML = snapshotMap.get(el);
+        });
+
+        let shown = 0;
+
+        sections.forEach((sec) => {
+          const tags = (sec.getAttribute("data-tags") || "").split(/\s+/);
+          const tagOk = activeTag === "all" || tags.includes(activeTag);
+          const textOk = !lower || sec.textContent.toLowerCase().includes(lower);
+
+          if (tagOk && textOk) {
+            sec.style.display = "";
+            shown++;
+
+            if (raw) {
+              const regex = new RegExp(`(${escapeRegExp(raw)})`, "gi");
+              sec.querySelectorAll("p, li, figcaption").forEach((node) => {
+                const walker = document.createTreeWalker(node, NodeFilter.SHOW_TEXT);
+                const textNodes = [];
+                let current;
+                while ((current = walker.nextNode())) {
+                  if (current.nodeValue.trim() && current.parentNode.tagName !== "MARK") {
+                    textNodes.push(current);
+                  }
+                }
+                textNodes.forEach((tNode) => {
+                  if (tNode.nodeValue.toLowerCase().includes(lower)) {
+                    const span = document.createElement("span");
+                    span.innerHTML = tNode.nodeValue.replace(regex, "<mark>$1</mark>");
+                    tNode.parentNode.replaceChild(span, tNode);
+                  }
+                });
+              });
+            }
+          } else {
+            sec.style.display = "none";
+          }
+        });
+
+        emptyMatch.style.display = shown === 0 ? "block" : "none";
+
+        if (raw && activeTag !== "all") {
+          statusMsg.textContent = `"${raw}" और चुने गए फ़िल्टर पर ${shown} खंड मिले।`;
+        } else if (raw) {
+          statusMsg.textContent = `"${raw}" के लिए ${shown} खंड मिले।`;
+        } else if (activeTag !== "all") {
+          statusMsg.textContent = `चुने गए विषय पर ${shown} खंड दिख रहे हैं।`;
+        } else {
+          statusMsg.textContent = `सभी ${sections.length} खंड प्रदर्शित हैं। किसी भी शब्द से तुरंत खोजें।`;
+        }
+      }
+
+      searchInput.addEventListener("input", applySearchAndFilter);
+
+      resetBtn.addEventListener("click", function () {
+        searchInput.value = "";
+        activeTag = "all";
+        chips.forEach((c) => c.classList.remove("active"));
+        document.querySelector('#filterChips .chip[data-tag="all"]').classList.add("active");
+        applySearchAndFilter();
+      });
+
+      chips.forEach((chip) => {
+        chip.addEventListener("click", function () {
+          chips.forEach((c) => c.classList.remove("active"));
+          this.classList.add("active");
+          activeTag = this.getAttribute("data-tag");
+          applySearchAndFilter();
+        });
+      });
+
+      fontBtn.addEventListener("click", function () {
+        largeFont = !largeFont;
+        document.body.style.fontSize = largeFont ? "18px" : "16px";
+      });
+
+      printBtn.addEventListener("click", function () {
+        window.print();
+      });
+
+      window.addEventListener("scroll", function () {
+        const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+        const pct = maxScroll > 0 ? (window.scrollY / maxScroll) * 100 : 0;
+        progressBar.style.width = `${Math.min(100, Math.max(0, pct))}%`;
+      });
+    })();
+  </script>
+</body>
+</html>
